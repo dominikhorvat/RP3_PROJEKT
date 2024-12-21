@@ -1,0 +1,15 @@
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\bin\Debug\BazaCaffeBar.mdf
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\bin\Debug\BazaCaffeBar_log.ldf
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\bin\Debug\RP3_projekt.exe.config
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\bin\Debug\RP3_projekt.exe
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\bin\Debug\RP3_projekt.pdb
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.csproj.AssemblyReference.cache
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.Properties.Resources.resources
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.csproj.GenerateResource.cache
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.csproj.CoreCompileInputs.cache
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.exe
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.pdb
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.FormPrijava.resources
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.FormStvoriZaposlenika.resources
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.FormKonobar.resources
+C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.FormVlasnik.resources
