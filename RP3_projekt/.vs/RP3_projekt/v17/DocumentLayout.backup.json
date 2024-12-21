@@ -3,23 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\domin\\desktop\\projektizrp3\\rp3_projekt\\rp3_projekt\\formprijava.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\rp3_projekt\\formprijava.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formprijava.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\rp3_projekt\\formprijava.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formprijava.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\domin\\desktop\\projektizrp3\\rp3_projekt\\rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\domin\\desktop\\projektizrp3\\rp3_projekt\\rp3_projekt\\formkonobar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formkonobar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_DOMIN_DESKTOP_PROJEKTIZRP3_RP3_PROJEKT_RP3_PROJEKT_BAZACAFFEBAR.MDF/True/SqlTable/dbo.Zaposlenik.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\rp3_projekt\\formprijava.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formprijava.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\rp3_projekt\\formstvorizaposlenika.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formstvorizaposlenika.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\domin\\desktop\\projektizrp3\\rp3_projekt\\rp3_projekt\\formkonobar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formkonobar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\rp3_projekt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,24 +50,12 @@
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_DOMIN_DESKTOP_PROJEKTIZRP3_RP3_PROJEKT_RP3_PROJEKT_BAZACAFFEBAR.MDF/True/SqlTable/dbo.Zaposlenik.sql",
               "ToolTip": "dbo.Zaposlenik [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-12-21T13:12:34.683Z",
+              "WhenOpened": "2024-12-21T13:22:07.543Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormKonobar.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormKonobar.cs",
-              "RelativeDocumentMoniker": "RP3_projekt\\FormKonobar.cs",
-              "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormKonobar.cs [Design]",
-              "RelativeToolTip": "RP3_projekt\\FormKonobar.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T11:30:15.357Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "FormVlasnik.cs [Design]",
               "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormVlasnik.cs",
               "RelativeDocumentMoniker": "RP3_projekt\\FormVlasnik.cs",
@@ -75,20 +67,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FormPrijava.cs",
               "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormPrijava.cs",
               "RelativeDocumentMoniker": "RP3_projekt\\FormPrijava.cs",
               "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormPrijava.cs",
               "RelativeToolTip": "RP3_projekt\\FormPrijava.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAYwGEAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T19:45:32.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "FormPrijava.cs [Design]",
               "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormPrijava.cs",
               "RelativeDocumentMoniker": "RP3_projekt\\FormPrijava.cs",
@@ -100,7 +92,31 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormStvoriZaposlenika.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormStvoriZaposlenika.cs",
+              "RelativeDocumentMoniker": "RP3_projekt\\FormStvoriZaposlenika.cs",
+              "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormStvoriZaposlenika.cs [Design]",
+              "RelativeToolTip": "RP3_projekt\\FormStvoriZaposlenika.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T13:17:30.661Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "FormKonobar.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormKonobar.cs",
+              "RelativeDocumentMoniker": "RP3_projekt\\FormKonobar.cs",
+              "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormKonobar.cs [Design]",
+              "RelativeToolTip": "RP3_projekt\\FormKonobar.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T11:30:15.357Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\Program.cs",
               "RelativeDocumentMoniker": "RP3_projekt\\Program.cs",
@@ -108,8 +124,7 @@
               "RelativeToolTip": "RP3_projekt\\Program.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwBkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T17:07:34.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T17:07:34.25Z"
             }
           ]
         }
