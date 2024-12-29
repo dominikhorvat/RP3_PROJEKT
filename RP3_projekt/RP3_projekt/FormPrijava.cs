@@ -52,7 +52,7 @@ namespace RP3_projekt
                 veza.Open();
 
                 //Ako su ispunjena oba polja projverimo ispravnost unosa u TextBoxeve
-                string upit = "SELECT [authorization], [last_login] FROM Zaposlenik " +
+                string upit = "SELECT * FROM Zaposlenik " +
                             "WHERE username = @username AND hash_password = @hash_password";
 
                 using (SqlCommand naredba = new SqlCommand(upit, veza))
@@ -65,10 +65,16 @@ namespace RP3_projekt
 
                     if (reader.Read()) //reader.Read() == true ako postoji zaposlenik
                     {
-                        string ovlast = reader["authorization"].ToString();
-                        //MessageBox.Show(ovlast);
-                        DateTime lastDate = (DateTime)reader["last_login"];
-
+                        Employee employee = new Employee()
+                        {
+                            Id = (int)reader["id"],
+                            Username = (string)reader["username"],
+                            Authorization = (string)reader["authorization"],
+                            Coffee = (byte)reader["coffee"],
+                            Juice = (byte)reader["juice"],
+                            LastLogin = (DateTime)reader["last_login"]
+                        };
+                        
                         /* 
                          * Trebamo provjeriti datum. Ako je dan različit od današnjeg prilikom prijave
                          * onda ažuriramo coffee na 2 i juice na 1, 
@@ -77,32 +83,32 @@ namespace RP3_projekt
 
                         reader.Close(); //obavezno zatvoriti jer ne možemo unutar iste veze izvršiti više upita
 
-                        if (lastDate.Date != DateTime.Today)
-                        {
-                            string updateUpit = "UPDATE Zaposlenik SET " +
-                                                "coffee = 2, juice = 1 WHERE " +
-                                                "username = @username";
-                            using(SqlCommand updateNaredba = new SqlCommand(updateUpit, veza)) //zbog DataReadera
-                            {
-                                updateNaredba.Parameters.AddWithValue("@username", username);
-                                updateNaredba.ExecuteNonQuery();
-                            }
-                        }
+                        //if (employee.LastLogin.Date != DateTime.Today)
+                        //{
+                        //    string updateUpit = "UPDATE Zaposlenik SET " +
+                        //                        "coffee = 2, juice = 1 WHERE " +
+                        //                        "username = @username";
+                        //    using (SqlCommand updateNaredba = new SqlCommand(updateUpit, veza)) //zbog DataReadera
+                        //    {
+                        //        updateNaredba.Parameters.AddWithValue("@username", username);
+                        //        updateNaredba.ExecuteNonQuery();
+                        //    }
+                        //}
 
-                        //trebamo ažurirat last_login na današnji datum i vrijeme
-                        string updateLastLoginUpit = "UPDATE Zaposlenik SET " +
-                                                    "last_login = @trenutnoVrijeme WHERE " +
-                                                    "username = @username";
-                        using (SqlCommand updateNaredba = new SqlCommand(updateLastLoginUpit, veza))
-                        {
-                            updateNaredba.Parameters.AddWithValue("@trenutnoVrijeme", DateTime.Now);
-                            updateNaredba.Parameters.AddWithValue("@username", username);
-                            updateNaredba.ExecuteNonQuery();
-                        }
+                        ////trebamo ažurirat last_login na današnji datum i vrijeme
+                        //string updateLastLoginUpit = "UPDATE Zaposlenik SET " +
+                        //                            "last_login = @trenutnoVrijeme WHERE " +
+                        //                            "username = @username";
+                        //using (SqlCommand updateNaredba = new SqlCommand(updateLastLoginUpit, veza))
+                        //{
+                        //    updateNaredba.Parameters.AddWithValue("@trenutnoVrijeme", DateTime.Now);
+                        //    updateNaredba.Parameters.AddWithValue("@username", username);
+                        //    updateNaredba.ExecuteNonQuery();
+                        //}
 
-                        if (ovlast == "Konobar")
+                        if (employee.Authorization == "Konobar")
                         {
-                            FormKonobar formaKonobar = new FormKonobar();
+                            FormKonobar formaKonobar = new FormKonobar(employee);
                             Hide(); //sakrivamo formu za login kad je pokrenuta nova forma
                             formaKonobar.ShowDialog();
                             Close();

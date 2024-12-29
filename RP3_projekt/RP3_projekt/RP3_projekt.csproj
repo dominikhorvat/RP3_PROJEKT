@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Item.cs" />
     <Compile Include="BazaCaffeBarDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -85,6 +86,25 @@
     <Compile Include="FormVlasnik.Designer.cs">
       <DependentUpon>FormVlasnik.cs</DependentUpon>
     </Compile>
+    <Compile Include="BillsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BillsControl.Designer.cs">
+      <DependentUpon>BillsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs" />
+    <Compile Include="FreezerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FreezerControl.Designer.cs">
+      <DependentUpon>FreezerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StorageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StorageControl.Designer.cs">
+      <DependentUpon>StorageControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormStvoriZaposlenika.cs">
@@ -92,6 +112,12 @@
     </Compile>
     <Compile Include="FormStvoriZaposlenika.Designer.cs">
       <DependentUpon>FormStvoriZaposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShiftEndControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShiftEndControl.Designer.cs">
+      <DependentUpon>ShiftEndControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormKonobar.resx">
       <DependentUpon>FormKonobar.cs</DependentUpon>
@@ -101,6 +127,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormVlasnik.resx">
       <DependentUpon>FormVlasnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillsControl.resx">
+      <DependentUpon>BillsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FreezerControl.resx">
+      <DependentUpon>FreezerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StorageControl.resx">
+      <DependentUpon>StorageControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,6 +149,9 @@
     </Compile>
     <EmbeddedResource Include="FormStvoriZaposlenika.resx">
       <DependentUpon>FormStvoriZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShiftEndControl.resx">
+      <DependentUpon>ShiftEndControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BazaCaffeBarDataSet.xsc">
       <DependentUpon>BazaCaffeBarDataSet.xsd</DependentUpon>
