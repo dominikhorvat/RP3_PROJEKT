@@ -40,3 +40,7 @@ C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projek
 C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.HappyHourControl.resources
 C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.FormAddOnHappyHour.resources
 C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.VlasnikInfoControl.resources
+C:\Users\Ruzica\Desktop\faks\rp3\RP3_PROJEKT\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.EmployeeControl.resources
+C:\Users\Ruzica\Desktop\faks\rp3\RP3_PROJEKT\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.FormAddOnHappyHour.resources
+C:\Users\Ruzica\Desktop\faks\rp3\RP3_PROJEKT\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.HappyHourControl.resources
+C:\Users\Ruzica\Desktop\faks\rp3\RP3_PROJEKT\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.VlasnikInfoControl.resources

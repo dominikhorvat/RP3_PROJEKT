@@ -9,6 +9,7 @@ namespace RP3_projekt
     internal class Item
     {
         public int Id { get; set; }
+        public ItemCategory Category { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
         public int FreezerQuantity { get; set; }
@@ -25,6 +26,7 @@ namespace RP3_projekt
             return new Item
             {
                 Id = this.Id,
+                Category = this.Category,
                 Name = this.Name,
                 Price = this.Price,
                 FreezerQuantity = this.FreezerQuantity,

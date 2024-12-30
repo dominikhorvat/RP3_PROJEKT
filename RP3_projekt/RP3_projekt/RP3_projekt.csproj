@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -64,6 +64,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bill.cs" />
+    <Compile Include="Discount.cs" />
+    <Compile Include="DiscountType.cs" />
     <Compile Include="EmployeeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +122,7 @@
     <Compile Include="FreezerControl.Designer.cs">
       <DependentUpon>FreezerControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItemCategory.cs" />
     <Compile Include="StorageControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -45,6 +45,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.billTotalPrice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.freeJuice = new System.Windows.Forms.CheckBox();
+            this.freeCoffee = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.selectedItemsView)).BeginInit();
             this.panelReturn.SuspendLayout();
             this.SuspendLayout();
@@ -102,7 +104,7 @@
             // employeeDiscount
             // 
             this.employeeDiscount.AutoSize = true;
-            this.employeeDiscount.Location = new System.Drawing.Point(26, 453);
+            this.employeeDiscount.Location = new System.Drawing.Point(30, 437);
             this.employeeDiscount.Name = "employeeDiscount";
             this.employeeDiscount.Size = new System.Drawing.Size(177, 17);
             this.employeeDiscount.TabIndex = 8;
@@ -216,10 +218,32 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Iznos računa";
             // 
+            // freeJuice
+            // 
+            this.freeJuice.AutoSize = true;
+            this.freeJuice.Location = new System.Drawing.Point(30, 480);
+            this.freeJuice.Name = "freeJuice";
+            this.freeJuice.Size = new System.Drawing.Size(170, 17);
+            this.freeJuice.TabIndex = 10;
+            this.freeJuice.Text = "Iskoristi besplatan cijeđeni sok";
+            this.freeJuice.UseVisualStyleBackColor = true;
+            // 
+            // freeCoffee
+            // 
+            this.freeCoffee.AutoSize = true;
+            this.freeCoffee.Location = new System.Drawing.Point(30, 460);
+            this.freeCoffee.Name = "freeCoffee";
+            this.freeCoffee.Size = new System.Drawing.Size(137, 17);
+            this.freeCoffee.TabIndex = 9;
+            this.freeCoffee.Text = "Iskoristi besplatnu kavu";
+            this.freeCoffee.UseVisualStyleBackColor = true;
+            // 
             // BillsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.freeJuice);
+            this.Controls.Add(this.freeCoffee);
             this.Controls.Add(this.panelReturn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -257,5 +281,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox billTotalPrice;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox freeJuice;
+        private System.Windows.Forms.CheckBox freeCoffee;
     }
 }
