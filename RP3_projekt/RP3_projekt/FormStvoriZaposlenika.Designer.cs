@@ -33,6 +33,7 @@
             this.gumbStvoriZaposlenika = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxUsername
@@ -57,7 +58,7 @@
             // 
             this.gumbStvoriZaposlenika.AutoSize = true;
             this.gumbStvoriZaposlenika.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.gumbStvoriZaposlenika.Location = new System.Drawing.Point(322, 367);
+            this.gumbStvoriZaposlenika.Location = new System.Drawing.Point(277, 367);
             this.gumbStvoriZaposlenika.Name = "gumbStvoriZaposlenika";
             this.gumbStvoriZaposlenika.Size = new System.Drawing.Size(98, 39);
             this.gumbStvoriZaposlenika.TabIndex = 2;
@@ -85,11 +86,24 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Unesi lozinku:";
             // 
-            // StvoriZaposlenika
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(136, 367);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 39);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Otkaži";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // FormStvoriZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(432, 553);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gumbStvoriZaposlenika);
@@ -97,7 +111,7 @@
             this.Controls.Add(this.textBoxUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "StvoriZaposlenika";
+            this.Name = "FormStvoriZaposlenika";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Unos i brisanje konobara";
             this.ResumeLayout(false);
@@ -112,5 +126,6 @@
         private System.Windows.Forms.Button gumbStvoriZaposlenika;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

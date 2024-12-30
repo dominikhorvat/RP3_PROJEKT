@@ -16,5 +16,29 @@ namespace RP3_projekt
         {
             InitializeComponent();
         }
+
+        private void btnZaposlenici_Click(object sender, EventArgs e)
+        {
+            EmployeeControl employeeCon = new EmployeeControl();
+            ShowControl(employeeCon);
+        }
+
+        private void btnHappyHour_Click(object sender, EventArgs e)
+        {
+            HappyHourControl happyhourCon = new HappyHourControl();
+            ShowControl(happyhourCon);
+        }
+
+        private void ShowControl(UserControl control)
+        {
+            panelContent.Controls.Clear();
+            control.Dock = DockStyle.Fill;
+            panelContent.Controls.Add(control);
+        }
+
+        private void buttonInfoVlasnik_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
