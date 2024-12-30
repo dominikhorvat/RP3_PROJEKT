@@ -88,6 +88,13 @@ namespace RP3_projekt
             MessageBox.Show("Broj dodanih zaposlenika: " + brNovihRedaka);
 
             veza.Close();
+
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
         }
 
         private string Hash(string password)
