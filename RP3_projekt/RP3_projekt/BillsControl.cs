@@ -323,7 +323,7 @@ namespace RP3_projekt
         {
             if(totalPrice > 0)
             {
-                List<HappyHour> happyHours = getExistingHappyHours(time);
+                List<HappyHour> happyHours = GetExistingHappyHours(time);
 
                 foreach (HappyHour happyHour in happyHours)
                 {
@@ -345,7 +345,7 @@ namespace RP3_projekt
             }
         }
 
-        private List<HappyHour> getExistingHappyHours(DateTime time)
+        private List<HappyHour> GetExistingHappyHours(DateTime time)
         {
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
