@@ -9,7 +9,6 @@ namespace RP3_projekt
     internal class Discount
     {
         public string Name { get; set; }
-        public DiscountType type { get; set; }
-        public double Value { get; set; }
+        public decimal Value { get; set; }
     }
 }

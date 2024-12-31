@@ -11,10 +11,11 @@ namespace RP3_projekt
         public int Id { get; set; }
         public ItemCategory Category { get; set; }
         public string Name { get; set; }
-        public double Price { get; set; }
+        public decimal Price { get; set; }
         public int FreezerQuantity { get; set; }
         public int StorageQuantity { get; set; }
         public int SelectedQuantity { get; set; } = 0;
+        public byte FreeCount { get; set; } = 0;
 
         public override string ToString()
         {
@@ -31,7 +32,8 @@ namespace RP3_projekt
                 Price = this.Price,
                 FreezerQuantity = this.FreezerQuantity,
                 StorageQuantity = this.StorageQuantity,
-                SelectedQuantity = this.SelectedQuantity
+                SelectedQuantity = this.SelectedQuantity,
+                FreeCount = this.FreeCount,
             };
         }
     }

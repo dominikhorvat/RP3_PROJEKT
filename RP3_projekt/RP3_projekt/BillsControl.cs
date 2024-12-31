@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
@@ -12,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.LinkLabel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace RP3_projekt
 {
@@ -59,11 +61,10 @@ namespace RP3_projekt
                         Id = (int)reader["id"],
                         Category = (ItemCategory)Enum.Parse(typeof(ItemCategory), (string)reader["category"]),
                         Name = (string)reader["name"],
-                        Price = Convert.ToDouble(reader["price"]),
+                        Price = Convert.ToDecimal(reader["price"]),
                         FreezerQuantity = (int)reader["freezer_quantity"]
                     });
                 }
-
             }
 
             connection.Close();
@@ -115,9 +116,11 @@ namespace RP3_projekt
             employeeDiscount.Checked = false;
 
             freeCoffee.Checked = false;
+            freeCoffee.Text = $"Iskoristi besplatnu kavu ( x{currentEmployee.Coffee} )";
             freeCoffee.Visible = currentEmployee.Coffee > 0;
 
             freeJuice.Checked = false;
+            freeJuice.Text = $"Iskoristi besplatan cijeđeni sok ( x{currentEmployee.Juice} )";
             freeJuice.Visible = currentEmployee.Juice > 0;
         }
 
@@ -190,14 +193,14 @@ namespace RP3_projekt
                 }
             }
 
-            double price = Math.Round(selectedItems.Sum(i => i.Price * i.SelectedQuantity), 2);
-            double totalPrice = price;
+            DateTime time = DateTime.Now;
+
+            decimal price = selectedItems.Sum(i => i.Price * i.SelectedQuantity);
+            decimal totalPrice = price;
 
             List<Discount> discounts = new List<Discount>();
-            bool shouldUpdateFreeItems = false;
-            SetDiscounts(discounts, ref shouldUpdateFreeItems, ref totalPrice);
-
-            DateTime time = DateTime.Now;
+            byte usedFreeCoffee = 0, usedFreeJuice = 0;
+            CheckDiscounts(discounts, ref totalPrice, ref usedFreeCoffee, ref usedFreeJuice, time);
 
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
@@ -223,7 +226,7 @@ namespace RP3_projekt
                 command.ExecuteNonQuery();
             }
 
-            if (shouldUpdateFreeItems)
+            if (usedFreeCoffee > 0 || usedFreeJuice > 0)
             {
                 command = new SqlCommand("UPDATE Zaposlenik SET coffee = @coffee, juice = @juice WHERE id = @employeeId", connection);
                 command.Parameters.AddWithValue("@employeeId", currentEmployee.Id);
@@ -250,33 +253,50 @@ namespace RP3_projekt
             ShowPanelReturn();
         }
 
-        private void SetDiscounts(List<Discount> discounts, ref bool shouldUpdateFreeItems, ref double totalPrice)
+        private void CheckDiscounts(List<Discount> discounts, ref decimal totalPrice, ref byte usedFreeCoffee, ref byte usedFreeJuice, DateTime time)
+        {
+            CheckFreeItems(discounts, ref totalPrice, ref usedFreeCoffee, ref usedFreeJuice);
+            CheckHappyHour(discounts, ref totalPrice, time);
+            CheckEmployeeDiscount(discounts, ref totalPrice);
+        }
+
+        private void CheckFreeItems(List<Discount> discounts, ref decimal totalPrice, ref byte usedFreeCoffee, ref byte usedFreeJuice)
         {
             if (freeCoffee.Checked)
             {
-                List<Item> selectedCoffees = selectedItems.Where(i => i.Category == ItemCategory.COFFEE)
-                                    .OrderBy(i => i.Price)
-                                    .ToList();
+                List<Item> selectedCoffees = new List<Item>();
+                foreach (Item item in selectedItems)
+                {
+                    if(item.Category == ItemCategory.COFFEE)
+                    {
+                        for(int i = 0; i < item.SelectedQuantity; i++)
+                        {
+                            selectedCoffees.Add(item);
+                        }
+                    }
+                }
+                selectedCoffees.OrderBy(i => i.Price);
 
                 for (int i = 0; i < currentEmployee.Coffee; i++)
                 {
                     if (i < selectedCoffees.Count)
                     {
+                        Item freeCoffee = selectedCoffees[i];
                         discounts.Add(new Discount()
                         {
                             Name = "Besplatna kava",
-                            type = DiscountType.FREE_ITEM,
-                            Value = selectedCoffees[i].Price
+                            Value = freeCoffee.Price,
                         });
-                        totalPrice -= selectedCoffees[i].Price;
-                        currentEmployee.Coffee--;
-                        shouldUpdateFreeItems = true;
+                        totalPrice -= freeCoffee.Price;
+                        freeCoffee.FreeCount++;
+                        usedFreeCoffee++;
                     }
                     else
                     {
                         break;
                     }
                 }
+                currentEmployee.Coffee -= usedFreeCoffee;
             }
 
             if (freeJuice.Checked)
@@ -285,28 +305,87 @@ namespace RP3_projekt
 
                 if (selectedJuices.Count > 0)
                 {
-                    double discountValue = selectedJuices.Min(i => i.Price);
+                    Item freeJuice = selectedJuices.OrderBy(i => i.Price).First();
                     discounts.Add(new Discount()
                     {
                         Name = "Besplatan cijeđeni sok",
-                        type = DiscountType.FREE_ITEM,
-                        Value = discountValue
+                        Value = freeJuice.Price,
                     });
-                    totalPrice -= discountValue;
-                    currentEmployee.Juice--;
-                    shouldUpdateFreeItems = true;
+                    totalPrice -= freeJuice.Price;
+                    freeJuice.FreeCount++;
+                    usedFreeJuice++;
+                    currentEmployee.Juice -= usedFreeJuice;
                 }
             }
+        }
 
+        private void CheckHappyHour(List<Discount> discounts, ref decimal totalPrice, DateTime time)
+        {
+            if(totalPrice > 0)
+            {
+                List<HappyHour> happyHours = getExistingHappyHours(time);
+
+                foreach (HappyHour happyHour in happyHours)
+                {
+                    Item item = selectedItems.FirstOrDefault(i => i.Id == happyHour.ItemId);
+                    if (item != null)
+                    {
+                        for (int i = 0; i < item.SelectedQuantity - item.FreeCount; i++)
+                        {
+                            decimal discountValue = Math.Round(item.Price * (happyHour.Discount / 100), 2);
+                            discounts.Add(new Discount()
+                            {
+                                Name = $"Happy hour {item.Name} {happyHour.Discount}%",
+                                Value = discountValue
+                            });
+                            totalPrice -= discountValue;
+                        }
+                    }
+                }
+            }
+        }
+
+        private List<HappyHour> getExistingHappyHours(DateTime time)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+
+            SqlCommand command = new SqlCommand("SELECT * FROM HappyHour WHERE time_from <= @time AND time_until > @time", connection);
+            command.Parameters.AddWithValue("@time", time);
+
+            List<HappyHour> happyHours = new List<HappyHour>();
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    happyHours.Add(new HappyHour()
+                    {
+                        Id = (int)reader["id"],
+                        ItemId = (int)reader["artikl_id"],
+                        Discount = Convert.ToDecimal(reader["discount"]),
+                        TimeFrom = (DateTime)reader["time_from"],
+                        TimeUntil = (DateTime)reader["time_until"]
+                    });
+                }
+
+            }
+
+            connection.Close();
+
+            return happyHours;
+        }
+
+        private void CheckEmployeeDiscount(List<Discount> discounts, ref decimal totalPrice)
+        {
             if (employeeDiscount.Checked && totalPrice > 0)
             {
+                decimal discountValue = Math.Round(totalPrice * 0.20m, 2);
                 discounts.Add(new Discount()
                 {
                     Name = "Popust zaposlenika",
-                    type = DiscountType.DISCOUNT,
-                    Value = 0.2
+                    Value = discountValue
                 });
-                totalPrice = Math.Round(totalPrice * 0.8, 2);
+                totalPrice -= discountValue;
             }
         }
 
@@ -355,24 +434,14 @@ namespace RP3_projekt
             }
             y += lineHeight;
 
-            e.Graphics.DrawString($"Ukupno: {bill.Price:F2}€", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, x + 300, y);
+            e.Graphics.DrawString($"Ukupno: {bill.Price}€", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, x + 300, y);
             y += lineHeight;
             foreach (Discount discount in bill.Discounts)
             {
-                double discountValue = 0;
-                if (discount.type == DiscountType.DISCOUNT)
-                {
-                    discountValue = Math.Round(bill.Price * discount.Value, 2);
-                }
-                else if (discount.type == DiscountType.FREE_ITEM)
-                {
-                    discountValue = discount.Value;
-                }
-
-                e.Graphics.DrawString($"{discount.Name}: -{discountValue}€", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, x + 300, y);
+                e.Graphics.DrawString($"{discount.Name}: -{discount.Value}€", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, x + 300, y);
                 y += lineHeight;
             }
-            e.Graphics.DrawString($"Total: {bill.TotalPrice:F2}€", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, x + 300, y);
+            e.Graphics.DrawString($"Total: {bill.TotalPrice}€", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, x + 300, y);
         }
 
         private void ShowPanelReturn()
@@ -389,8 +458,8 @@ namespace RP3_projekt
                 MessageBox.Show("Molimo unesite koliko novaca je dao gost!");
                 return;
             }
-            double receivedNum;
-            if (!double.TryParse(receivedStr, out receivedNum) || receivedNum <= 0 || receivedNum < bill.TotalPrice)
+            decimal receivedNum;
+            if (!decimal.TryParse(receivedStr, out receivedNum) || receivedNum <= 0 || receivedNum < bill.TotalPrice)
             {
                 MessageBox.Show("Neispravan unos primljenog novca!");
                 return;
