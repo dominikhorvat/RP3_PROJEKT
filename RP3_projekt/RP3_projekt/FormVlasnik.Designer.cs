@@ -32,14 +32,21 @@
             this.btnHappyHour = new System.Windows.Forms.Button();
             this.btnZaposlenici = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnPotrosnja = new System.Windows.Forms.Button();
+            this.btnUpravljajArtiklima = new System.Windows.Forms.Button();
+            this.pictureBoxInfoIcon = new System.Windows.Forms.PictureBox();
+            this.btnDodajNoviArtikl = new System.Windows.Forms.Button();
             this.panelSidebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfoIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSidebar
             // 
             this.panelSidebar.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panelSidebar.Controls.Add(this.label1);
+            this.panelSidebar.Controls.Add(this.btnDodajNoviArtikl);
+            this.panelSidebar.Controls.Add(this.pictureBoxInfoIcon);
+            this.panelSidebar.Controls.Add(this.btnUpravljajArtiklima);
+            this.panelSidebar.Controls.Add(this.btnPotrosnja);
             this.panelSidebar.Controls.Add(this.btnHappyHour);
             this.panelSidebar.Controls.Add(this.btnZaposlenici);
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -50,7 +57,7 @@
             // 
             // btnHappyHour
             // 
-            this.btnHappyHour.Location = new System.Drawing.Point(55, 187);
+            this.btnHappyHour.Location = new System.Drawing.Point(55, 384);
             this.btnHappyHour.Name = "btnHappyHour";
             this.btnHappyHour.Size = new System.Drawing.Size(136, 44);
             this.btnHappyHour.TabIndex = 1;
@@ -60,7 +67,7 @@
             // 
             // btnZaposlenici
             // 
-            this.btnZaposlenici.Location = new System.Drawing.Point(55, 98);
+            this.btnZaposlenici.Location = new System.Drawing.Point(55, 272);
             this.btnZaposlenici.Name = "btnZaposlenici";
             this.btnZaposlenici.Size = new System.Drawing.Size(136, 46);
             this.btnZaposlenici.TabIndex = 0;
@@ -76,14 +83,49 @@
             this.panelContent.Size = new System.Drawing.Size(798, 653);
             this.panelContent.TabIndex = 1;
             // 
-            // label1
+            // btnPotrosnja
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 394);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.btnPotrosnja.Location = new System.Drawing.Point(55, 501);
+            this.btnPotrosnja.Name = "btnPotrosnja";
+            this.btnPotrosnja.Size = new System.Drawing.Size(136, 44);
+            this.btnPotrosnja.TabIndex = 2;
+            this.btnPotrosnja.Text = "Potrošnja";
+            this.btnPotrosnja.UseVisualStyleBackColor = true;
+            this.btnPotrosnja.Click += new System.EventHandler(this.btnPotrosnja_Click);
+            // 
+            // btnUpravljajArtiklima
+            // 
+            this.btnUpravljajArtiklima.Location = new System.Drawing.Point(55, 64);
+            this.btnUpravljajArtiklima.Name = "btnUpravljajArtiklima";
+            this.btnUpravljajArtiklima.Size = new System.Drawing.Size(136, 45);
+            this.btnUpravljajArtiklima.TabIndex = 3;
+            this.btnUpravljajArtiklima.Text = "Upravljaj artiklima";
+            this.btnUpravljajArtiklima.UseVisualStyleBackColor = true;
+            this.btnUpravljajArtiklima.Click += new System.EventHandler(this.btnUpravljajArtiklima_Click);
+            // 
+            // pictureBoxInfoIcon
+            // 
+            this.pictureBoxInfoIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxInfoIcon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxInfoIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxInfoIcon.Image = global::RP3_projekt.Properties.Resources.infoicon;
+            this.pictureBoxInfoIcon.Location = new System.Drawing.Point(12, 594);
+            this.pictureBoxInfoIcon.Name = "pictureBoxInfoIcon";
+            this.pictureBoxInfoIcon.Size = new System.Drawing.Size(49, 49);
+            this.pictureBoxInfoIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInfoIcon.TabIndex = 4;
+            this.pictureBoxInfoIcon.TabStop = false;
+            this.pictureBoxInfoIcon.Click += new System.EventHandler(this.pictureBoxInfoIcon_Click);
+            // 
+            // btnDodajNoviArtikl
+            // 
+            this.btnDodajNoviArtikl.Location = new System.Drawing.Point(55, 170);
+            this.btnDodajNoviArtikl.Name = "btnDodajNoviArtikl";
+            this.btnDodajNoviArtikl.Size = new System.Drawing.Size(136, 46);
+            this.btnDodajNoviArtikl.TabIndex = 5;
+            this.btnDodajNoviArtikl.Text = "Dodaj novi artikl";
+            this.btnDodajNoviArtikl.UseVisualStyleBackColor = true;
+            this.btnDodajNoviArtikl.Click += new System.EventHandler(this.btnDodajNoviArtikl_Click);
             // 
             // FormVlasnik
             // 
@@ -96,7 +138,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Forma za vlasnika";
             this.panelSidebar.ResumeLayout(false);
-            this.panelSidebar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfoIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,6 +149,9 @@
         private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.Button btnHappyHour;
         private System.Windows.Forms.Button btnZaposlenici;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPotrosnja;
+        private System.Windows.Forms.Button btnUpravljajArtiklima;
+        private System.Windows.Forms.PictureBox pictureBoxInfoIcon;
+        private System.Windows.Forms.Button btnDodajNoviArtikl;
     }
 }

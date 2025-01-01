@@ -36,9 +36,28 @@ namespace RP3_projekt
             panelContent.Controls.Add(control);
         }
 
-        private void buttonInfoVlasnik_Click(object sender, EventArgs e)
+        private void pictureBoxInfoIcon_Click(object sender, EventArgs e)
         {
+            VlasnikInfoControl vlasnikInfoCon = new VlasnikInfoControl();
+            ShowControl(vlasnikInfoCon);
+        }
 
+        private void btnUpravljajArtiklima_Click(object sender, EventArgs e)
+        {
+            ManagementControl managementCon = new ManagementControl();
+            ShowControl(managementCon);
+        }
+
+        private void btnPotrosnja_Click(object sender, EventArgs e)
+        {
+            ConsuptionControl consuptionControl = new ConsuptionControl();
+            ShowControl(consuptionControl); 
+        }
+
+        private void btnDodajNoviArtikl_Click(object sender, EventArgs e)
+        {
+            AddNewArtiklControl addNewArtiklControl = new AddNewArtiklControl();
+            ShowControl(addNewArtiklControl);
         }
     }
 }

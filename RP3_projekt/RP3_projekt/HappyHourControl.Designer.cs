@@ -59,7 +59,7 @@
             this.dgvSviArtikli.RowHeadersWidth = 51;
             this.dgvSviArtikli.RowTemplate.Height = 24;
             this.dgvSviArtikli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSviArtikli.Size = new System.Drawing.Size(535, 150);
+            this.dgvSviArtikli.Size = new System.Drawing.Size(571, 174);
             this.dgvSviArtikli.TabIndex = 1;
             // 
             // dgvArtikliHH
@@ -73,7 +73,7 @@
             this.dgvArtikliHH.ReadOnly = true;
             this.dgvArtikliHH.RowHeadersWidth = 51;
             this.dgvArtikliHH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArtikliHH.Size = new System.Drawing.Size(535, 150);
+            this.dgvArtikliHH.Size = new System.Drawing.Size(571, 165);
             this.dgvArtikliHH.TabIndex = 2;
             // 
             // label2
@@ -88,7 +88,7 @@
             // buttonDodaj
             // 
             this.buttonDodaj.AutoSize = true;
-            this.buttonDodaj.Location = new System.Drawing.Point(619, 193);
+            this.buttonDodaj.Location = new System.Drawing.Point(659, 217);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(75, 26);
             this.buttonDodaj.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             // buttonMakni
             // 
-            this.buttonMakni.Location = new System.Drawing.Point(619, 429);
+            this.buttonMakni.Location = new System.Drawing.Point(659, 444);
             this.buttonMakni.Name = "buttonMakni";
             this.buttonMakni.Size = new System.Drawing.Size(75, 23);
             this.buttonMakni.TabIndex = 5;

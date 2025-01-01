@@ -64,7 +64,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewArtiklControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddNewArtiklControl.Designer.cs">
+      <DependentUpon>AddNewArtiklControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bill.cs" />
+    <Compile Include="ConsuptionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConsuptionControl.Designer.cs">
+      <DependentUpon>ConsuptionControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Discount.cs" />
     <Compile Include="EmployeeControl.cs">
       <SubType>UserControl</SubType>
@@ -123,6 +135,12 @@
       <DependentUpon>FreezerControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemCategory.cs" />
+    <Compile Include="ManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManagementControl.Designer.cs">
+      <DependentUpon>ManagementControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="StorageControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +167,12 @@
     <Compile Include="VlasnikInfoControl.Designer.cs">
       <DependentUpon>VlasnikInfoControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddNewArtiklControl.resx">
+      <DependentUpon>AddNewArtiklControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsuptionControl.resx">
+      <DependentUpon>ConsuptionControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeControl.resx">
       <DependentUpon>EmployeeControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HappyHourControl.resx">
       <DependentUpon>HappyHourControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementControl.resx">
+      <DependentUpon>ManagementControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StorageControl.resx">
       <DependentUpon>StorageControl.cs</DependentUpon>
@@ -227,6 +254,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>BazaCaffeBar.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\logouticon.png" />
     <None Include="Resources\infoicon.png" />
     <None Include="Resources\loginbg.jpg" />
   </ItemGroup>

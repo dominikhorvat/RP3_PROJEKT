@@ -117,7 +117,9 @@ namespace RP3_projekt
                         {
                             FormVlasnik formaVlasnik = new FormVlasnik();
                             Hide(); //sakrivamo formu za login kad je pokrenuta nova forma
+                            //Visible = false;
                             formaVlasnik.ShowDialog();
+                            //Visible = true;
                             Close(); 
                         }
                     }
