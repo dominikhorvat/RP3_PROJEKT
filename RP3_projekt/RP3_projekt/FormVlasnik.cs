@@ -15,6 +15,9 @@ namespace RP3_projekt
         public FormVlasnik()
         {
             InitializeComponent();
+
+            ManagementControl managementCon = new ManagementControl();
+            ShowControl(managementCon);
         }
 
         private void btnZaposlenici_Click(object sender, EventArgs e)

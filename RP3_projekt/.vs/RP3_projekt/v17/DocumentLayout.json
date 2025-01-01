@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\domin\\desktop\\projektizrp3\\rp3_projekt\\rp3_projekt\\formprijava.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formprijava.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\domin\\desktop\\projektizrp3\\rp3_projekt\\rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\domin\\desktop\\projektizrp3\\rp3_projekt\\rp3_projekt\\formprijava.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formprijava.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\domin\\desktop\\projektizrp3\\rp3_projekt\\rp3_projekt\\managementcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\managementcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\domin\\desktop\\projektizrp3\\rp3_projekt\\rp3_projekt\\managementcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\managementcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\domin\\desktop\\projektizrp3\\rp3_projekt\\rp3_projekt\\formaddonhappyhour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formaddonhappyhour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\domin\\desktop\\projektizrp3\\rp3_projekt\\rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,64 +34,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormPrijava.cs",
-              "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormPrijava.cs",
-              "RelativeDocumentMoniker": "RP3_projekt\\FormPrijava.cs",
-              "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormPrijava.cs",
-              "RelativeToolTip": "RP3_projekt\\FormPrijava.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T14:14:35.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormPrijava.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormPrijava.cs",
-              "RelativeDocumentMoniker": "RP3_projekt\\FormPrijava.cs",
-              "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormPrijava.cs [Design]",
-              "RelativeToolTip": "RP3_projekt\\FormPrijava.cs [Design]",
+              "Title": "FormVlasnik.cs",
+              "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormVlasnik.cs",
+              "RelativeDocumentMoniker": "RP3_projekt\\FormVlasnik.cs",
+              "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormVlasnik.cs",
+              "RelativeToolTip": "RP3_projekt\\FormVlasnik.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T14:14:33.218Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormAddOnHappyHour.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormAddOnHappyHour.cs",
-              "RelativeDocumentMoniker": "RP3_projekt\\FormAddOnHappyHour.cs",
-              "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormAddOnHappyHour.cs [Design]",
-              "RelativeToolTip": "RP3_projekt\\FormAddOnHappyHour.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T13:36:11.903Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ManagementControl.cs",
-              "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\ManagementControl.cs",
-              "RelativeDocumentMoniker": "RP3_projekt\\ManagementControl.cs",
-              "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\ManagementControl.cs",
-              "RelativeToolTip": "RP3_projekt\\ManagementControl.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAwCYAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T11:03:26.289Z",
+              "WhenOpened": "2025-01-01T19:23:07.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ManagementControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\ManagementControl.cs",
-              "RelativeDocumentMoniker": "RP3_projekt\\ManagementControl.cs",
-              "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\ManagementControl.cs [Design]",
-              "RelativeToolTip": "RP3_projekt\\ManagementControl.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "FormVlasnik.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormVlasnik.cs",
+              "RelativeDocumentMoniker": "RP3_projekt\\FormVlasnik.cs",
+              "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormVlasnik.cs [Design]",
+              "RelativeToolTip": "RP3_projekt\\FormVlasnik.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T10:54:08.945Z",
+              "WhenOpened": "2025-01-01T19:23:05.684Z",
               "EditorCaption": " [Design]"
             }
           ]

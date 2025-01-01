@@ -34,9 +34,20 @@ namespace RP3_projekt
 
             DataTable dt = new DataTable(); 
 
-            adapter.Fill(dt); 
+            adapter.Fill(dt);
 
-            dgvSviArtikli.DataSource = dt; 
+            dgvSviArtikli.SuspendLayout();
+
+            dgvSviArtikli.DataSource = dt;
+
+            dgvSviArtikli.Columns["id"].HeaderText = "#";
+            dgvSviArtikli.Columns["category"].HeaderText = "Kategorija";
+            dgvSviArtikli.Columns["name"].HeaderText = "Naziv artikla";
+            dgvSviArtikli.Columns["price"].HeaderText = "Cijena";
+            dgvSviArtikli.Columns["freezer_quantity"].HeaderText = "Stanje hladnjaka";
+            dgvSviArtikli.Columns["storage_quantity"].HeaderText = "Stanje skladišta";
+
+            dgvSviArtikli.ResumeLayout();
 
             veza.Close();
         }

@@ -78,7 +78,7 @@ namespace RP3_projekt
 
             //provjera je li unesena cijena u odgovarajućem obliku xxxx,xx
             string unos = textBoxPromjenaCijene.Text.Trim();
-            string ispravanOblik = @"^\d+(\,\d{1,2})?$";
+            string ispravanOblik = @"^(?:[1-9]\d*|\d)(\,\d{1,2})?$";
 
             if (!Regex.IsMatch(unos, ispravanOblik))
             {

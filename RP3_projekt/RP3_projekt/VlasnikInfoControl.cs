@@ -15,6 +15,10 @@ namespace RP3_projekt
         public VlasnikInfoControl()
         {
             InitializeComponent();
+
+            labelUputeZaCijenu.Text = "Odgovarajući format cijene za artikl je broj s dvije decimale.\n" +
+                "Znak separatora koji se uvažava prilikom unosa je znak zareza.\n" +
+                "Također, moguće je unijeti brojeve oblika: \"1\", \"2,1\" i \"3,12\"";
         }
     }
 }
