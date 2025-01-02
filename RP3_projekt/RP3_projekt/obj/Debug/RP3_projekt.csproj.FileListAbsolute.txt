@@ -47,3 +47,7 @@ C:\Users\Ruzica\Desktop\faks\rp3\RP3_PROJEKT\RP3_projekt\RP3_projekt\obj\Debug\R
 C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.ConsuptionControl.resources
 C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.ManagementControl.resources
 C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.AddNewArtiklControl.resources
+C:\Users\Ruzica\Desktop\faks\rp3\RP3_PROJEKT\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.AddNewArtiklControl.resources
+C:\Users\Ruzica\Desktop\faks\rp3\RP3_PROJEKT\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.ConsuptionControl.resources
+C:\Users\Ruzica\Desktop\faks\rp3\RP3_PROJEKT\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.ManagementControl.resources
+C:\Users\Ruzica\Desktop\faks\rp3\RP3_PROJEKT\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.NotificationsControl.resources

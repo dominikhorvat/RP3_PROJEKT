@@ -220,10 +220,13 @@ namespace RP3_projekt
                 command.Parameters.AddWithValue("@quantity", item.SelectedQuantity);
                 command.ExecuteNonQuery();
 
-                command = new SqlCommand("UPDATE Artikl SET freezer_quantity = freezer_quantity - @quantity WHERE id = @itemId", connection);
+                item.FreezerQuantity -= item.SelectedQuantity;
+                command = new SqlCommand("UPDATE Artikl SET freezer_quantity = @freezerQuantity WHERE id = @itemId", connection);
                 command.Parameters.AddWithValue("@itemId", item.Id);
-                command.Parameters.AddWithValue("@quantity", item.SelectedQuantity);
+                command.Parameters.AddWithValue("@freezerQuantity", item.FreezerQuantity);
                 command.ExecuteNonQuery();
+
+                NotificationsService.CreateNotificationIfNeeded(item, NotificationLocation.FREEZER);
             }
 
             if (usedFreeCoffee > 0 || usedFreeJuice > 0)

@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -141,6 +141,14 @@
     <Compile Include="ManagementControl.Designer.cs">
       <DependentUpon>ManagementControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Notification.cs" />
+    <Compile Include="NotificationLocation.cs" />
+    <Compile Include="NotificationsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NotificationsControl.Designer.cs">
+      <DependentUpon>NotificationsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="StorageControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -200,6 +208,9 @@
     <EmbeddedResource Include="ManagementControl.resx">
       <DependentUpon>ManagementControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NotificationsControl.resx">
+      <DependentUpon>NotificationsControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StorageControl.resx">
       <DependentUpon>StorageControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +244,7 @@
     <None Include="BazaCaffeBarDataSet.xss">
       <DependentUpon>BazaCaffeBarDataSet.xsd</DependentUpon>
     </None>
+    <Compile Include="NotificationsService.cs" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

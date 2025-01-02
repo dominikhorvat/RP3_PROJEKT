@@ -116,6 +116,9 @@ namespace RP3_projekt
 
             updateItemInDb(item);
             freezerItemsView.Refresh();
+
+            NotificationsService.CreateNotificationIfNeeded(item, NotificationLocation.STORAGE);
+            NotificationsService.DeleteNotificationIfNeeded(item, NotificationLocation.FREEZER);
         }
 
         private void updateItemInDb(Item item)

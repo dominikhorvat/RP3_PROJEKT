@@ -34,12 +34,14 @@
             this.freezerBtn = new System.Windows.Forms.Button();
             this.billsBtn = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.notificationsBtn = new System.Windows.Forms.Button();
             this.panelSidebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSidebar
             // 
             this.panelSidebar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelSidebar.Controls.Add(this.notificationsBtn);
             this.panelSidebar.Controls.Add(this.shiftEndBtn);
             this.panelSidebar.Controls.Add(this.storageBtn);
             this.panelSidebar.Controls.Add(this.freezerBtn);
@@ -96,6 +98,17 @@
             this.panelContent.Size = new System.Drawing.Size(605, 688);
             this.panelContent.TabIndex = 1;
             // 
+            // notificationsBtn
+            // 
+            this.notificationsBtn.ForeColor = System.Drawing.Color.Red;
+            this.notificationsBtn.Location = new System.Drawing.Point(42, 623);
+            this.notificationsBtn.Name = "notificationsBtn";
+            this.notificationsBtn.Size = new System.Drawing.Size(110, 41);
+            this.notificationsBtn.TabIndex = 4;
+            this.notificationsBtn.Text = "Obavijesti";
+            this.notificationsBtn.UseVisualStyleBackColor = true;
+            this.notificationsBtn.Click += new System.EventHandler(this.notificationsBtn_Click);
+            // 
             // FormKonobar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,5 +133,6 @@
         private System.Windows.Forms.Button freezerBtn;
         private System.Windows.Forms.Button billsBtn;
         private System.Windows.Forms.Panel panelContent;
+        private System.Windows.Forms.Button notificationsBtn;
     }
 }

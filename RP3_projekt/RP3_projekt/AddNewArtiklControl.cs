@@ -120,7 +120,7 @@ namespace RP3_projekt
 
             string upit = "INSERT INTO [Artikl]"
                 + "(name,price,category) " +
-                "VALUES(@name,@price,@category)";
+                "VALUES(@name,@price,@category); SELECT SCOPE_IDENTITY();";
             SqlCommand naredba = new SqlCommand(upit, veza);
             naredba.Parameters.AddWithValue
                 ("@name", naziv);
@@ -129,22 +129,19 @@ namespace RP3_projekt
             naredba.Parameters.AddWithValue
                 ("@category", kategorija);
 
-            int brNovihRedaka = 0;
-
+            int artiklId = 0;
             try
             {
-                brNovihRedaka = naredba.ExecuteNonQuery();
+                artiklId = Convert.ToInt32(naredba.ExecuteScalar());
+                MessageBox.Show("Dodali ste uspješno novi artikl!");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-            if (brNovihRedaka > 0)
-            {
-                MessageBox.Show("Dodali ste uspješno novi artikl!");
-                veza.Close();
-            }
+            veza.Close();
+            
+            NotificationsService.CreateNotification(artiklId);
         }
     }
 }

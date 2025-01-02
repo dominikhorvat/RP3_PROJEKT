@@ -105,6 +105,8 @@ namespace RP3_projekt
 
             updateItemInDb(item);
             storageItemsView.Refresh();
+            
+            NotificationsService.DeleteNotificationIfNeeded(item, NotificationLocation.STORAGE);
         }
 
         private void updateItemInDb(Item item)

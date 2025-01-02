@@ -32,8 +32,9 @@ namespace RP3_projekt
             //    Authorization = "Konobar",
             //    Coffee = 2,
             //    Juice = 1,
-            //    LastLogin = DateTime.Now
+            //    LastLogin = DateTime.Parse("30.11.2024. 00:00:00")
             //}));
+            //Application.Run(new FormVlasnik());
         }
     }
 }

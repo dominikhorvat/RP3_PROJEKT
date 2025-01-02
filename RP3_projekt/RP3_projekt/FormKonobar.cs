@@ -23,6 +23,8 @@ namespace RP3_projekt
 
             this.currentEmployee = currentEmployee;
 
+            NotificationsService.Initialize(notificationsBtn);
+
             BillsControl control = new BillsControl(currentEmployee);
             ShowControl(control);
         }
@@ -47,7 +49,13 @@ namespace RP3_projekt
 
         private void shiftEndBtn_Click(object sender, EventArgs e)
         {
-            ShiftEndControl control = new ShiftEndControl();
+            ShiftEndControl control = new ShiftEndControl(currentEmployee);
+            ShowControl(control);
+        }
+
+        private void notificationsBtn_Click(object sender, EventArgs e)
+        {
+            NotificationsControl control = new NotificationsControl();
             ShowControl(control);
         }
 
