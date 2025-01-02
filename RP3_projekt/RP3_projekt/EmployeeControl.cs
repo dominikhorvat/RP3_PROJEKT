@@ -38,7 +38,20 @@ namespace RP3_projekt
 
             adapter.Fill(dt);
 
+            dataGridViewEmployee.SuspendLayout();
+
             dataGridViewEmployee.DataSource = dt;
+
+            //dataGridViewEmployee.Columns["id"].HeaderText = "#";
+            dataGridViewEmployee.Columns["id"].Visible = false;
+            dataGridViewEmployee.Columns["username"].HeaderText = "Korisničko ime";
+            dataGridViewEmployee.Columns["hash_password"].HeaderText = "Hash lozinka";
+            dataGridViewEmployee.Columns["authorization"].HeaderText = "Ovlast";
+            dataGridViewEmployee.Columns["coffee"].HeaderText = "Preostala kava";
+            dataGridViewEmployee.Columns["juice"].HeaderText = "Preostali sok";
+            dataGridViewEmployee.Columns["last_login"].HeaderText = "Posljednja prijava u sustav";
+
+            dataGridViewEmployee.ResumeLayout();
 
             veza.Close();
         }

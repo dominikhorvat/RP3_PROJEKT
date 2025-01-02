@@ -116,11 +116,11 @@ namespace RP3_projekt
                         else //ovlast je "Vlasnik"
                         {
                             FormVlasnik formaVlasnik = new FormVlasnik();
-                            Hide(); //sakrivamo formu za login kad je pokrenuta nova forma
-                            //Visible = false;
+                            //Hide(); //sakrivamo formu za login kad je pokrenuta nova forma
+                            Visible = false;
                             formaVlasnik.ShowDialog();
-                            //Visible = true;
-                            Close(); 
+                            Visible = true;
+                            //Close(); 
                         }
                     }
                     else

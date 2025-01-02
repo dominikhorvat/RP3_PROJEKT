@@ -27,7 +27,7 @@ namespace RP3_projekt
 
         private void PopuniPadajucuListu()
         {
-            string upit = "SELECT DISTINCT category FROM Artikl";
+            /*string upit = "SELECT DISTINCT category FROM Artikl";
             List<string> kategorije = new List<string>();
 
             using (SqlConnection veza = new SqlConnection(connectionString))
@@ -44,7 +44,10 @@ namespace RP3_projekt
             }
             kategorije.Add("OTHER");
 
-            comboBoxKategorija.Items.AddRange(kategorije.ToArray());
+            comboBoxKategorija.Items.AddRange(kategorije.ToArray());*/
+
+            string[] kategorije = Enum.GetNames(typeof(ItemCategory));
+            comboBoxKategorija.Items.AddRange(kategorije);
             comboBoxKategorija.SelectedIndex = -1;
         }
 
@@ -100,6 +103,16 @@ namespace RP3_projekt
                     return;
                 }
 
+                //ako je kod prošao dobro do ovog koraka preostaje još samo
+                //prije inserta u tablicu provjeriti naziv artikla, to jest da ne budu
+                //dva artikla istog naziva
+                if (provjeriNazivArtikla(naziv) == 1)
+                {
+                    MessageBox.Show("Naziv unesenog artikla već postoji u bazi!");
+                    return;
+                }
+
+                //sve je ok!
                 insertNoviArtikl(naziv,cijena,kategorija);
             }
             else
@@ -111,6 +124,32 @@ namespace RP3_projekt
                 return;
             }
             //MessageBox.Show("Sve je ok!");
+        }
+
+        private int provjeriNazivArtikla(string naziv)
+        {
+            using (SqlConnection veza = new SqlConnection(connectionString))
+            {
+                veza.Open();
+
+                string provjeraUpit = "SELECT COUNT(*) FROM [Artikl] WHERE name = @name";
+
+                using (SqlCommand provjeraNaredba = new SqlCommand(provjeraUpit, veza))
+                {
+                    provjeraNaredba.Parameters.AddWithValue("@name", naziv);
+
+                    int brojPostojecih = (int)provjeraNaredba.ExecuteScalar();
+
+                    if (brojPostojecih > 0)
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
         }
 
         private void insertNoviArtikl(string naziv, decimal cijena, string kategorija)

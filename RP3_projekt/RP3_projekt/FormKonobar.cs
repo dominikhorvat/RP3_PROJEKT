@@ -16,10 +16,16 @@ namespace RP3_projekt
     public partial class FormKonobar : Form
     {
         private Employee currentEmployee;
+        private Timer timer;
 
         public FormKonobar(Employee currentEmployee)
         {
             InitializeComponent();
+
+            timer = new Timer();
+            timer.Interval = 60 * 1000;
+            timer.Tick += Timer_Tick;
+            timer.Start();
 
             this.currentEmployee = currentEmployee;
 
@@ -27,6 +33,31 @@ namespace RP3_projekt
 
             BillsControl control = new BillsControl(currentEmployee);
             ShowControl(control);
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            moveFromHappyHour();
+        }
+
+        private void moveFromHappyHour()
+        {
+            string connectionString = ConfigurationManager
+           .ConnectionStrings["BazaCaffeBar"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection veza = new SqlConnection(connectionString))
+                {
+                    veza.Open();
+                    string upit = "DELETE FROM HappyHour WHERE GETDATE() > time_until";
+                    using (SqlCommand command = new SqlCommand(upit, veza))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex) { Console.WriteLine(ex.ToString()); }
         }
 
         private void billsBtn_Click(object sender, EventArgs e)

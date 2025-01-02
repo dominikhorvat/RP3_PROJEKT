@@ -162,10 +162,10 @@ namespace RP3_projekt
                     string upit = "DELETE FROM Artikl WHERE Id=@Id";
                     using (SqlCommand command = new SqlCommand(upit, veza))
                     {
-                        {
-                            command.Parameters.AddWithValue("@Id", artiklDeleteId);
-                            command.ExecuteNonQuery();
-                        }
+                        
+                        command.Parameters.AddWithValue("@Id", artiklDeleteId);
+                        command.ExecuteNonQuery();
+                        
                     }
                 }
             }

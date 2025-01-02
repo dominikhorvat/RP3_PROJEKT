@@ -61,9 +61,18 @@ namespace RP3_projekt
 
             DataTable dt = new DataTable(); 
 
-            adapter.Fill(dt); 
+            adapter.Fill(dt);
 
-            dgvArtikliHH.DataSource = dt; 
+            dgvArtikliHH.SuspendLayout();
+
+            dgvArtikliHH.DataSource = dt;
+
+            dgvArtikliHH.Columns["artikl_id"].HeaderText = "ID artikla (#)";
+            dgvArtikliHH.Columns["discount"].HeaderText = "Popust na happy hour-u";
+            dgvArtikliHH.Columns["time_from"].HeaderText = "Početak popusta";
+            dgvArtikliHH.Columns["time_until"].HeaderText = "Kraj popusta";
+
+            dgvArtikliHH.ResumeLayout();
 
             veza.Close();
         }

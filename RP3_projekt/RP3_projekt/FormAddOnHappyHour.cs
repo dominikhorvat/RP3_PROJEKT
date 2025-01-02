@@ -53,6 +53,8 @@ namespace RP3_projekt
             //provjera jesu li timeFrom i timeUntil različiti
             //i timeFrom < timeUntil barem 6 sati razlike
 
+
+            
             if (timeFrom >= timeUntil)
             {
                 MessageBox.Show("Vrijeme početka mora biti manje od vremena završetka!");
