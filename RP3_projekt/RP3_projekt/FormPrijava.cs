@@ -109,9 +109,11 @@ namespace RP3_projekt
                         if (employee.Authorization == "Konobar")
                         {
                             FormKonobar formaKonobar = new FormKonobar(employee);
-                            Hide(); //sakrivamo formu za login kad je pokrenuta nova forma
+                            //Hide(); //sakrivamo formu za login kad je pokrenuta nova forma
+                            Visible = false;
                             formaKonobar.ShowDialog();
-                            Close();
+                            Visible = true;
+                            //Close();
                         }
                         else //ovlast je "Vlasnik"
                         {

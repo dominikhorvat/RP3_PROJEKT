@@ -47,6 +47,19 @@ namespace RP3_projekt
             dgvSviArtikli.Columns["freezer_quantity"].HeaderText = "Stanje hladnjaka";
             dgvSviArtikli.Columns["storage_quantity"].HeaderText = "Stanje skladišta";
 
+            dgvSviArtikli.CellFormatting += (s, e) =>
+            {
+                if (dgvSviArtikli.Columns[e.ColumnIndex].Name == "category")
+                {
+                    ItemCategory itemCategory;
+                    if (Enum.TryParse((string)e.Value, out itemCategory))
+                    {
+                        e.Value = ItemCategoryUtility.itemCategoryTranslations[itemCategory];
+                        e.FormattingApplied = true;
+                    }
+                }
+            };
+
             dgvSviArtikli.ResumeLayout();
 
             veza.Close();

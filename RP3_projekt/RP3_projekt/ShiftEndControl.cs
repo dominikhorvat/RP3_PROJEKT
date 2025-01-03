@@ -18,6 +18,7 @@ namespace RP3_projekt
         private string connectionString = ConfigurationManager
             .ConnectionStrings["BazaCaffeBar"].ConnectionString;
         private Employee currentEmployee;
+        private FormKonobar formKonobar;
 
         private BindingList<Bill> bills;
         private System.Windows.Forms.SortOrder billsSortOrder;
@@ -27,11 +28,12 @@ namespace RP3_projekt
         private System.Windows.Forms.SortOrder itemsSortOrder;
         private DataGridViewColumn itemsSortColumn;
 
-        public ShiftEndControl(Employee currentEmployee)
+        public ShiftEndControl(Employee currentEmployee, FormKonobar formKonobar)
         {
             InitializeComponent();
 
             this.currentEmployee = currentEmployee;
+            this.formKonobar = formKonobar;
 
             PopulateShiftBills();
             PopulateShiftItems();
@@ -245,7 +247,17 @@ namespace RP3_projekt
 
         private void logoutBtn_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Želite li se odjaviti iz aplikacije?",
+                                   "Odjava",
+                                   MessageBoxButtons.YesNo,
+                                   MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //zaustavimo prvo timer, iako ne treba jer se odnosi samo na ovu formu, nije na odmet
+                formKonobar.StopTimer();
 
+                formKonobar.Close();
+            }
         }
     }
 }

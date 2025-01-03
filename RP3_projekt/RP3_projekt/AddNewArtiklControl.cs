@@ -46,9 +46,13 @@ namespace RP3_projekt
 
             comboBoxKategorija.Items.AddRange(kategorije.ToArray());*/
 
-            string[] kategorije = Enum.GetNames(typeof(ItemCategory));
-            comboBoxKategorija.Items.AddRange(kategorije);
-            comboBoxKategorija.SelectedIndex = -1;
+            //string[] kategorije = Enum.GetNames(typeof(ItemCategory));
+            //comboBoxKategorija.Items.AddRange(kategorije);
+            //comboBoxKategorija.SelectedIndex = -1;
+
+            comboBoxKategorija.DataSource = new BindingSource(ItemCategoryUtility.itemCategoryTranslations, null);
+            comboBoxKategorija.DisplayMember = "Value";
+            comboBoxKategorija.ValueMember = "Key";
         }
 
         private void btnDodaj_Click(object sender, EventArgs e)
@@ -81,7 +85,7 @@ namespace RP3_projekt
             }
 
             //provjeri combobox
-            if (comboBoxKategorija.SelectedIndex == -1)
+            if (comboBoxKategorija.SelectedValue == null)
             {
                 MessageBox.Show("Morate odabrati kategoriju artikla.");
                 return;
@@ -89,7 +93,7 @@ namespace RP3_projekt
 
             //trebam naziv i kategoriju
             string naziv = textBoxNaziv.Text;
-            string kategorija = comboBoxKategorija.SelectedItem.ToString();
+            ItemCategory kategorija = (ItemCategory)comboBoxKategorija.SelectedValue;
 
             decimal cijena;
             if (decimal.TryParse(unos, NumberStyles.Any, new CultureInfo("hr-HR"), out cijena))
@@ -152,7 +156,7 @@ namespace RP3_projekt
             }
         }
 
-        private void insertNoviArtikl(string naziv, decimal cijena, string kategorija)
+        private void insertNoviArtikl(string naziv, decimal cijena, ItemCategory kategorija)
         {
             SqlConnection veza = new SqlConnection(connectionString);
             veza.Open();
@@ -166,7 +170,7 @@ namespace RP3_projekt
             naredba.Parameters.AddWithValue
                 ("@price", cijena);
             naredba.Parameters.AddWithValue
-                ("@category", kategorija);
+                ("@category", kategorija.ToString());
 
             int artiklId = 0;
             try

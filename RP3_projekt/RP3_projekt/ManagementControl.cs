@@ -47,6 +47,19 @@ namespace RP3_projekt
             dataGridViewChangePrice.Columns["freezer_quantity"].HeaderText = "Stanje hladnjaka";
             dataGridViewChangePrice.Columns["storage_quantity"].HeaderText = "Stanje skladišta";
 
+            dataGridViewChangePrice.CellFormatting += (s, e) =>
+            {
+                if (dataGridViewChangePrice.Columns[e.ColumnIndex].Name == "category")
+                {
+                    ItemCategory itemCategory;
+                    if (Enum.TryParse((string)e.Value, out itemCategory))
+                    {
+                        e.Value = ItemCategoryUtility.itemCategoryTranslations[itemCategory];
+                        e.FormattingApplied = true;
+                    }
+                }
+            };
+
             dataGridViewChangePrice.ResumeLayout();
 
             veza.Close();

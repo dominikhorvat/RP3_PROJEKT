@@ -24,4 +24,26 @@ namespace RP3_projekt
         COCKTAIL,
         OTHER
     }
+
+    static class ItemCategoryUtility
+    {
+        public static readonly Dictionary<ItemCategory, string> itemCategoryTranslations = new Dictionary<ItemCategory, string>
+        {
+            { ItemCategory.WATER, "voda"},
+            { ItemCategory.SPARKLING_WATER, "gazirana voda"},
+            { ItemCategory.JUICE, "sok"},
+            { ItemCategory.FRESH_JUICE, "cijeđeni sok"},
+            { ItemCategory.FIZZY_DRINK, "gazirano piće"},
+            { ItemCategory.COFFEE, "kava"},
+            { ItemCategory.BEER, "pivo"},
+            { ItemCategory.WINE, "vino"},
+            { ItemCategory.LIQUEUR, "liker"},
+            { ItemCategory.HARD_LIQUOR, "žestoko piće"},
+            { ItemCategory.HOT_CHOCOLATE, "vruća čokolada"},
+            { ItemCategory.TEA, "čaj"},
+            { ItemCategory.ENERGY_DRINK, "energetsko piće"},
+            { ItemCategory.COCKTAIL, "koktel"},
+            { ItemCategory.OTHER, "ostalo"}
+        };
+    }
 }

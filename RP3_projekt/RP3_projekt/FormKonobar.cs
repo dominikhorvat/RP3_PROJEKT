@@ -16,7 +16,7 @@ namespace RP3_projekt
     public partial class FormKonobar : Form
     {
         private Employee currentEmployee;
-        private Timer timer;
+        public Timer timer;
 
         public FormKonobar(Employee currentEmployee)
         {
@@ -33,6 +33,12 @@ namespace RP3_projekt
 
             BillsControl control = new BillsControl(currentEmployee);
             ShowControl(control);
+        }
+
+        public void StopTimer()
+        {
+            timer.Stop();
+            timer.Dispose();
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -80,7 +86,7 @@ namespace RP3_projekt
 
         private void shiftEndBtn_Click(object sender, EventArgs e)
         {
-            ShiftEndControl control = new ShiftEndControl(currentEmployee);
+            ShiftEndControl control = new ShiftEndControl(currentEmployee, this);
             ShowControl(control);
         }
 
