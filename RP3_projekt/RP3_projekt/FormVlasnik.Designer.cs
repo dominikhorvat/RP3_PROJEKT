@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelSidebar = new System.Windows.Forms.Panel();
+            this.pictureBoxLogoutIcon = new System.Windows.Forms.PictureBox();
             this.btnDodajNoviArtikl = new System.Windows.Forms.Button();
             this.pictureBoxInfoIcon = new System.Windows.Forms.PictureBox();
             this.btnUpravljajArtiklima = new System.Windows.Forms.Button();
@@ -36,10 +37,9 @@
             this.btnHappyHour = new System.Windows.Forms.Button();
             this.btnZaposlenici = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.pictureBoxLogoutIcon = new System.Windows.Forms.PictureBox();
             this.panelSidebar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfoIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoutIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfoIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSidebar
@@ -55,12 +55,26 @@
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSidebar.Location = new System.Drawing.Point(0, 0);
             this.panelSidebar.Name = "panelSidebar";
-            this.panelSidebar.Size = new System.Drawing.Size(259, 653);
+            this.panelSidebar.Size = new System.Drawing.Size(259, 803);
             this.panelSidebar.TabIndex = 0;
+            // 
+            // pictureBoxLogoutIcon
+            // 
+            this.pictureBoxLogoutIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxLogoutIcon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxLogoutIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxLogoutIcon.Image = global::RP3_projekt.Properties.Resources.logouticon;
+            this.pictureBoxLogoutIcon.Location = new System.Drawing.Point(204, 742);
+            this.pictureBoxLogoutIcon.Name = "pictureBoxLogoutIcon";
+            this.pictureBoxLogoutIcon.Size = new System.Drawing.Size(49, 49);
+            this.pictureBoxLogoutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogoutIcon.TabIndex = 6;
+            this.pictureBoxLogoutIcon.TabStop = false;
+            this.pictureBoxLogoutIcon.Click += new System.EventHandler(this.pictureBoxLogoutIcon_Click);
             // 
             // btnDodajNoviArtikl
             // 
-            this.btnDodajNoviArtikl.Location = new System.Drawing.Point(55, 161);
+            this.btnDodajNoviArtikl.Location = new System.Drawing.Point(55, 197);
             this.btnDodajNoviArtikl.Name = "btnDodajNoviArtikl";
             this.btnDodajNoviArtikl.Size = new System.Drawing.Size(136, 46);
             this.btnDodajNoviArtikl.TabIndex = 5;
@@ -74,7 +88,7 @@
             this.pictureBoxInfoIcon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBoxInfoIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxInfoIcon.Image = global::RP3_projekt.Properties.Resources.infoicon;
-            this.pictureBoxInfoIcon.Location = new System.Drawing.Point(12, 594);
+            this.pictureBoxInfoIcon.Location = new System.Drawing.Point(12, 742);
             this.pictureBoxInfoIcon.Name = "pictureBoxInfoIcon";
             this.pictureBoxInfoIcon.Size = new System.Drawing.Size(49, 49);
             this.pictureBoxInfoIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -84,7 +98,7 @@
             // 
             // btnUpravljajArtiklima
             // 
-            this.btnUpravljajArtiklima.Location = new System.Drawing.Point(55, 64);
+            this.btnUpravljajArtiklima.Location = new System.Drawing.Point(55, 91);
             this.btnUpravljajArtiklima.Name = "btnUpravljajArtiklima";
             this.btnUpravljajArtiklima.Size = new System.Drawing.Size(136, 45);
             this.btnUpravljajArtiklima.TabIndex = 3;
@@ -94,7 +108,7 @@
             // 
             // btnPotrosnja
             // 
-            this.btnPotrosnja.Location = new System.Drawing.Point(55, 474);
+            this.btnPotrosnja.Location = new System.Drawing.Point(55, 529);
             this.btnPotrosnja.Name = "btnPotrosnja";
             this.btnPotrosnja.Size = new System.Drawing.Size(136, 44);
             this.btnPotrosnja.TabIndex = 2;
@@ -104,7 +118,7 @@
             // 
             // btnHappyHour
             // 
-            this.btnHappyHour.Location = new System.Drawing.Point(55, 369);
+            this.btnHappyHour.Location = new System.Drawing.Point(55, 423);
             this.btnHappyHour.Name = "btnHappyHour";
             this.btnHappyHour.Size = new System.Drawing.Size(136, 44);
             this.btnHappyHour.TabIndex = 1;
@@ -114,7 +128,7 @@
             // 
             // btnZaposlenici
             // 
-            this.btnZaposlenici.Location = new System.Drawing.Point(55, 264);
+            this.btnZaposlenici.Location = new System.Drawing.Point(55, 305);
             this.btnZaposlenici.Name = "btnZaposlenici";
             this.btnZaposlenici.Size = new System.Drawing.Size(136, 46);
             this.btnZaposlenici.TabIndex = 0;
@@ -127,36 +141,22 @@
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(259, 0);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(798, 653);
+            this.panelContent.Size = new System.Drawing.Size(898, 803);
             this.panelContent.TabIndex = 1;
-            // 
-            // pictureBoxLogoutIcon
-            // 
-            this.pictureBoxLogoutIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBoxLogoutIcon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxLogoutIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxLogoutIcon.Image = global::RP3_projekt.Properties.Resources.logouticon;
-            this.pictureBoxLogoutIcon.Location = new System.Drawing.Point(204, 594);
-            this.pictureBoxLogoutIcon.Name = "pictureBoxLogoutIcon";
-            this.pictureBoxLogoutIcon.Size = new System.Drawing.Size(49, 49);
-            this.pictureBoxLogoutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogoutIcon.TabIndex = 6;
-            this.pictureBoxLogoutIcon.TabStop = false;
-            this.pictureBoxLogoutIcon.Click += new System.EventHandler(this.pictureBoxLogoutIcon_Click);
             // 
             // FormVlasnik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 653);
+            this.ClientSize = new System.Drawing.Size(1157, 803);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelSidebar);
             this.Name = "FormVlasnik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Forma za vlasnika";
             this.panelSidebar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfoIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoutIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfoIcon)).EndInit();
             this.ResumeLayout(false);
 
         }

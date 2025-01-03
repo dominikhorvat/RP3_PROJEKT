@@ -49,7 +49,7 @@
             // 
             this.dataGridViewEmployee.AllowUserToAddRows = false;
             this.dataGridViewEmployee.AllowUserToDeleteRows = false;
-            this.dataGridViewEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridViewEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEmployee.Location = new System.Drawing.Point(29, 108);
             this.dataGridViewEmployee.MultiSelect = false;
@@ -58,7 +58,7 @@
             this.dataGridViewEmployee.RowHeadersWidth = 51;
             this.dataGridViewEmployee.RowTemplate.Height = 24;
             this.dataGridViewEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEmployee.Size = new System.Drawing.Size(671, 264);
+            this.dataGridViewEmployee.Size = new System.Drawing.Size(843, 264);
             this.dataGridViewEmployee.TabIndex = 1;
             // 
             // buttonOtkaz
@@ -66,7 +66,7 @@
             this.buttonOtkaz.AutoSize = true;
             this.buttonOtkaz.BackColor = System.Drawing.Color.LightGray;
             this.buttonOtkaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonOtkaz.Location = new System.Drawing.Point(625, 401);
+            this.buttonOtkaz.Location = new System.Drawing.Point(797, 395);
             this.buttonOtkaz.Name = "buttonOtkaz";
             this.buttonOtkaz.Size = new System.Drawing.Size(75, 30);
             this.buttonOtkaz.TabIndex = 2;
@@ -79,7 +79,7 @@
             this.buttonZaposli.AutoSize = true;
             this.buttonZaposli.BackColor = System.Drawing.Color.LightGray;
             this.buttonZaposli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonZaposli.Location = new System.Drawing.Point(579, 530);
+            this.buttonZaposli.Location = new System.Drawing.Point(751, 533);
             this.buttonZaposli.Name = "buttonZaposli";
             this.buttonZaposli.Size = new System.Drawing.Size(121, 30);
             this.buttonZaposli.TabIndex = 3;
@@ -97,7 +97,7 @@
             this.Controls.Add(this.dataGridViewEmployee);
             this.Controls.Add(this.label1);
             this.Name = "EmployeeControl";
-            this.Size = new System.Drawing.Size(765, 586);
+            this.Size = new System.Drawing.Size(901, 586);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

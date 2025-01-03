@@ -52,7 +52,7 @@
             // 
             this.dataGridViewChangePrice.AllowUserToAddRows = false;
             this.dataGridViewChangePrice.AllowUserToDeleteRows = false;
-            this.dataGridViewChangePrice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewChangePrice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewChangePrice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewChangePrice.Location = new System.Drawing.Point(44, 49);
             this.dataGridViewChangePrice.MultiSelect = false;
@@ -61,7 +61,7 @@
             this.dataGridViewChangePrice.RowHeadersWidth = 51;
             this.dataGridViewChangePrice.RowTemplate.Height = 24;
             this.dataGridViewChangePrice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewChangePrice.Size = new System.Drawing.Size(715, 438);
+            this.dataGridViewChangePrice.Size = new System.Drawing.Size(806, 438);
             this.dataGridViewChangePrice.TabIndex = 2;
             // 
             // label3
@@ -78,7 +78,7 @@
             // 
             this.btnPotvrdiCijenu.AutoSize = true;
             this.btnPotvrdiCijenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPotvrdiCijenu.Location = new System.Drawing.Point(639, 507);
+            this.btnPotvrdiCijenu.Location = new System.Drawing.Point(730, 505);
             this.btnPotvrdiCijenu.Name = "btnPotvrdiCijenu";
             this.btnPotvrdiCijenu.Size = new System.Drawing.Size(120, 30);
             this.btnPotvrdiCijenu.TabIndex = 6;
@@ -90,7 +90,7 @@
             // 
             this.btnUkloniOdabranog.AutoSize = true;
             this.btnUkloniOdabranog.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnUkloniOdabranog.Location = new System.Drawing.Point(611, 554);
+            this.btnUkloniOdabranog.Location = new System.Drawing.Point(702, 557);
             this.btnUkloniOdabranog.Name = "btnUkloniOdabranog";
             this.btnUkloniOdabranog.Size = new System.Drawing.Size(148, 30);
             this.btnUkloniOdabranog.TabIndex = 7;
@@ -103,14 +103,14 @@
             this.textBoxPromjenaCijene.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBoxPromjenaCijene.Location = new System.Drawing.Point(406, 507);
             this.textBoxPromjenaCijene.Name = "textBoxPromjenaCijene";
-            this.textBoxPromjenaCijene.Size = new System.Drawing.Size(119, 27);
+            this.textBoxPromjenaCijene.Size = new System.Drawing.Size(162, 27);
             this.textBoxPromjenaCijene.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(531, 509);
+            this.label4.Location = new System.Drawing.Point(574, 509);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 20);
             this.label4.TabIndex = 9;

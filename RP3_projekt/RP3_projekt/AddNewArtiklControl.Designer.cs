@@ -43,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(21, 24);
+            this.label1.Location = new System.Drawing.Point(46, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(368, 20);
             this.label1.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             this.btnDodaj.AutoSize = true;
             this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDodaj.Location = new System.Drawing.Point(239, 244);
+            this.btnDodaj.Location = new System.Drawing.Point(264, 258);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(75, 30);
             this.btnDodaj.TabIndex = 1;
@@ -65,7 +65,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(21, 80);
+            this.label2.Location = new System.Drawing.Point(46, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 20);
             this.label2.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(21, 130);
+            this.label3.Location = new System.Drawing.Point(46, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 3;
@@ -85,7 +85,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(21, 182);
+            this.label4.Location = new System.Drawing.Point(46, 196);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 4;
@@ -94,7 +94,7 @@
             // textBoxNaziv
             // 
             this.textBoxNaziv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxNaziv.Location = new System.Drawing.Point(135, 80);
+            this.textBoxNaziv.Location = new System.Drawing.Point(160, 94);
             this.textBoxNaziv.Name = "textBoxNaziv";
             this.textBoxNaziv.Size = new System.Drawing.Size(179, 27);
             this.textBoxNaziv.TabIndex = 5;
@@ -102,7 +102,7 @@
             // textBoxCijena
             // 
             this.textBoxCijena.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxCijena.Location = new System.Drawing.Point(135, 127);
+            this.textBoxCijena.Location = new System.Drawing.Point(160, 141);
             this.textBoxCijena.Name = "textBoxCijena";
             this.textBoxCijena.Size = new System.Drawing.Size(179, 27);
             this.textBoxCijena.TabIndex = 6;
@@ -111,7 +111,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(320, 130);
+            this.label5.Location = new System.Drawing.Point(345, 144);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 20);
             this.label5.TabIndex = 8;
@@ -122,7 +122,7 @@
             this.comboBoxKategorija.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxKategorija.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBoxKategorija.FormattingEnabled = true;
-            this.comboBoxKategorija.Location = new System.Drawing.Point(135, 179);
+            this.comboBoxKategorija.Location = new System.Drawing.Point(160, 193);
             this.comboBoxKategorija.Name = "comboBoxKategorija";
             this.comboBoxKategorija.Size = new System.Drawing.Size(179, 28);
             this.comboBoxKategorija.TabIndex = 9;

@@ -19,6 +19,10 @@ namespace RP3_projekt
             labelUputeZaCijenu.Text = "Odgovarajući format cijene za artikl je broj s dvije decimale.\n" +
                 "Znak separatora koji se uvažava prilikom unosa je znak zareza.\n" +
                 "Također, moguće je unijeti brojeve oblika: \"1\", \"2,1\" i \"3,12\"";
+
+            labelPotrosnjaInfo.Text = "U potrošnji kada potvrdite datum dobit ćete grafički " +
+                "prikaz za odabrani artikl \nu odabranom rasponu ako postoji te ispis koliko" +
+                " je prodano.\nTakođer, bit će navedeni artikl koji je najviše prodan (ukoliko postoji).";
         }
     }
 }

@@ -61,7 +61,7 @@
             this.dgvSviArtikli.RowHeadersWidth = 51;
             this.dgvSviArtikli.RowTemplate.Height = 24;
             this.dgvSviArtikli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSviArtikli.Size = new System.Drawing.Size(640, 174);
+            this.dgvSviArtikli.Size = new System.Drawing.Size(723, 174);
             this.dgvSviArtikli.TabIndex = 1;
             // 
             // dgvArtikliHH
@@ -76,7 +76,7 @@
             this.dgvArtikliHH.ReadOnly = true;
             this.dgvArtikliHH.RowHeadersWidth = 51;
             this.dgvArtikliHH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArtikliHH.Size = new System.Drawing.Size(640, 165);
+            this.dgvArtikliHH.Size = new System.Drawing.Size(723, 165);
             this.dgvArtikliHH.TabIndex = 2;
             // 
             // label2
@@ -93,7 +93,7 @@
             // 
             this.buttonDodaj.AutoSize = true;
             this.buttonDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonDodaj.Location = new System.Drawing.Point(615, 249);
+            this.buttonDodaj.Location = new System.Drawing.Point(698, 249);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(75, 30);
             this.buttonDodaj.TabIndex = 4;
@@ -105,7 +105,7 @@
             // 
             this.buttonMakni.AutoSize = true;
             this.buttonMakni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonMakni.Location = new System.Drawing.Point(615, 493);
+            this.buttonMakni.Location = new System.Drawing.Point(698, 493);
             this.buttonMakni.Name = "buttonMakni";
             this.buttonMakni.Size = new System.Drawing.Size(75, 30);
             this.buttonMakni.TabIndex = 5;
@@ -124,7 +124,7 @@
             this.Controls.Add(this.dgvSviArtikli);
             this.Controls.Add(this.label1);
             this.Name = "HappyHourControl";
-            this.Size = new System.Drawing.Size(743, 557);
+            this.Size = new System.Drawing.Size(820, 557);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviArtikli)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikliHH)).EndInit();
             this.ResumeLayout(false);

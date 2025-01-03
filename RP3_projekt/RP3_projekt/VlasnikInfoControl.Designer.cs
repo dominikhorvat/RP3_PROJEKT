@@ -30,6 +30,7 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.labelUputeZaCijenu = new System.Windows.Forms.Label();
+            this.labelPotrosnjaInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -51,10 +52,20 @@
             this.labelUputeZaCijenu.Size = new System.Drawing.Size(0, 20);
             this.labelUputeZaCijenu.TabIndex = 2;
             // 
+            // labelPotrosnjaInfo
+            // 
+            this.labelPotrosnjaInfo.AutoSize = true;
+            this.labelPotrosnjaInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelPotrosnjaInfo.Location = new System.Drawing.Point(28, 162);
+            this.labelPotrosnjaInfo.Name = "labelPotrosnjaInfo";
+            this.labelPotrosnjaInfo.Size = new System.Drawing.Size(0, 20);
+            this.labelPotrosnjaInfo.TabIndex = 3;
+            // 
             // VlasnikInfoControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelPotrosnjaInfo);
             this.Controls.Add(this.labelUputeZaCijenu);
             this.Controls.Add(this.label2);
             this.Name = "VlasnikInfoControl";
@@ -68,5 +79,6 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelUputeZaCijenu;
+        private System.Windows.Forms.Label labelPotrosnjaInfo;
     }
 }
