@@ -1,26 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\",
+  "WorkspaceRootPath": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\rp3_projekt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\domin\\desktop\\projektizrp3\\rp3_projekt\\rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\ruzica\\desktop\\faks\\rp3\\rp3_projekt\\rp3_projekt\\rp3_projekt\\shiftendcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\shiftendcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\ruzica\\desktop\\faks\\rp3\\rp3_projekt\\rp3_projekt\\rp3_projekt\\shiftendcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\shiftendcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\ruzica\\desktop\\faks\\rp3\\rp3_projekt\\rp3_projekt\\rp3_projekt\\custommessagebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\custommessagebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\ruzica\\desktop\\faks\\rp3\\rp3_projekt\\rp3_projekt\\rp3_projekt\\custommessagebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\custommessagebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\rp3_projekt\\managementcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\managementcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,74 +18,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ShiftEndControl.cs",
-              "DocumentMoniker": "C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\RP3_projekt\\ShiftEndControl.cs",
-              "RelativeDocumentMoniker": "RP3_projekt\\ShiftEndControl.cs",
-              "ToolTip": "C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\RP3_projekt\\ShiftEndControl.cs",
-              "RelativeToolTip": "RP3_projekt\\ShiftEndControl.cs",
-              "ViewState": "AgIAAN8AAAAAAAAAAAA4wPoAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T13:47:12.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ShiftEndControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\RP3_projekt\\ShiftEndControl.cs",
-              "RelativeDocumentMoniker": "RP3_projekt\\ShiftEndControl.cs",
-              "ToolTip": "C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\RP3_projekt\\ShiftEndControl.cs [Design]",
-              "RelativeToolTip": "RP3_projekt\\ShiftEndControl.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T13:47:11.611Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CustomMessageBox.cs",
-              "DocumentMoniker": "C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\RP3_projekt\\CustomMessageBox.cs",
-              "RelativeDocumentMoniker": "RP3_projekt\\CustomMessageBox.cs",
-              "ToolTip": "C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\RP3_projekt\\CustomMessageBox.cs",
-              "RelativeToolTip": "RP3_projekt\\CustomMessageBox.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T13:21:34.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CustomMessageBox.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\RP3_projekt\\CustomMessageBox.cs",
-              "RelativeDocumentMoniker": "RP3_projekt\\CustomMessageBox.cs",
-              "ToolTip": "C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\RP3_projekt\\CustomMessageBox.cs [Design]",
-              "RelativeToolTip": "RP3_projekt\\CustomMessageBox.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T13:21:23.37Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\RP3_projekt\\Program.cs",
-              "RelativeDocumentMoniker": "RP3_projekt\\Program.cs",
-              "ToolTip": "C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\RP3_projekt\\Program.cs",
-              "RelativeToolTip": "RP3_projekt\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAvAAAAAAAAAA==",
+              "Title": "FormVlasnik.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormVlasnik.cs",
+              "RelativeDocumentMoniker": "RP3_projekt\\FormVlasnik.cs",
+              "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormVlasnik.cs [Design]",
+              "RelativeToolTip": "RP3_projekt\\FormVlasnik.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T19:40:14.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T19:21:58.789Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ManagementControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\ManagementControl.cs",
+              "RelativeDocumentMoniker": "RP3_projekt\\ManagementControl.cs",
+              "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\ManagementControl.cs [Design]",
+              "RelativeToolTip": "RP3_projekt\\ManagementControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T19:21:49.57Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

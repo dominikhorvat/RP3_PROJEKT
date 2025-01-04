@@ -42,10 +42,8 @@ namespace RP3_projekt
 
             dataGridViewEmployee.DataSource = dt;
 
-            //dataGridViewEmployee.Columns["id"].HeaderText = "#";
             dataGridViewEmployee.Columns["id"].Visible = false;
             dataGridViewEmployee.Columns["username"].HeaderText = "Korisničko ime";
-            //dataGridViewEmployee.Columns["hash_password"].HeaderText = "Hash lozinka";
             dataGridViewEmployee.Columns["hash_password"].Visible = false;
             dataGridViewEmployee.Columns["authorization"].HeaderText = "Ovlast";
             dataGridViewEmployee.Columns["coffee"].HeaderText = "Preostala besplatna kava";
@@ -69,7 +67,8 @@ namespace RP3_projekt
 
         private void buttonOtkaz_Click(object sender, EventArgs e)
         {
-            //nepotrebna provjera s obzirom na properties data view grid-a, ali za svaki slucaj
+            //provjera je li odabran redak, iako je početno označen neki redak,
+            //ova provjera je samo ako nešto krene kako nije planirano
             if (dataGridViewEmployee.CurrentRow == null || dataGridViewEmployee.CurrentRow.Index == -1)
             {
                 MessageBox.Show("Molimo odaberite valjani redak za brisanje.", 
@@ -96,6 +95,10 @@ namespace RP3_projekt
             }
         }
 
+        /// <summary>
+        /// Metoda koja briše zaposlenika ovisno o primljenom id-iju
+        /// </summary>
+        /// <param name="idEmployee">id po kojem se briše zaposlenik iz baze</param>
         private void deleteFromEmployee(int idEmployee)
         {
             try
@@ -116,6 +119,11 @@ namespace RP3_projekt
             catch (Exception ex) { Console.WriteLine(ex.ToString()); }
         }
 
+        /// <summary>
+        /// Događaj koji prepoznaje o kojoj je ovlasti riječ, ako je ovlast "Vlasnik" onemogućava gumb za brisanje
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DataGridViewEmployee_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridViewEmployee.SelectedRows.Count > 0)

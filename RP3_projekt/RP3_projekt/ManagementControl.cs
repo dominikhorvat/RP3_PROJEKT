@@ -25,6 +25,9 @@ namespace RP3_projekt
         string connectionString = ConfigurationManager
            .ConnectionStrings["BazaCaffeBar"].ConnectionString;
 
+        /// <summary>
+        /// Pročita sve artikle iz tablice i popuni data grid view
+        /// </summary>
         private void ReadArtikl()
         {
             SqlConnection veza = new SqlConnection(connectionString);
@@ -67,7 +70,7 @@ namespace RP3_projekt
 
         private void btnPotvrdiCijenu_Click(object sender, EventArgs e)
         {
-            //provjerimo je li oznacen redak uopce
+            //provjerimo je li oznacen redak
             if (dataGridViewChangePrice.CurrentRow == null || dataGridViewChangePrice.CurrentRow.Index == -1)
             {
                 MessageBox.Show("Molimo odaberite valjani redak za artikl kojem želite promijeniti cijenu!",
@@ -116,10 +119,7 @@ namespace RP3_projekt
                 }
 
                 //Sve je ok!
-                //MessageBox.Show("Cijena je u ispravnom obliku", 
-                //                "Informacija",
-                //                MessageBoxButtons.OK);
-
+                //Možemo ažurirati cijenu artikla
                 updateCijenaArtikla(artiklId, cijena);
                 ReadArtikl();
             }
@@ -161,6 +161,10 @@ namespace RP3_projekt
             }
         }
 
+        /// <summary>
+        /// Metoda koja briše artikl iz baze podataka koji je prethodno označen u data grid view
+        /// </summary>
+        /// <param name="artiklDeleteId">Odgovarajući id artikla koji označava artikl koji se mora ukloniti</param>
         private void deleteArtiklFromCaffe(int artiklDeleteId)
         {
             try
@@ -181,6 +185,11 @@ namespace RP3_projekt
             catch (Exception ex) { Console.WriteLine(ex.ToString()); }
         }
         
+        /// <summary>
+        /// Metoda koja ažurira cijenu artikla u bazi podataka
+        /// </summary>
+        /// <param name="id">Id artikla kojeg treba ažurirati</param>
+        /// <param name="cijena">Nova cijena artikla nakon ažuriranja</param>
         private void updateCijenaArtikla(int id, decimal cijena)
         {
             try

@@ -15,6 +15,7 @@ namespace RP3_projekt
     public partial class FormVlasnik : Form
     {
         private Button selectedButton = null;
+        //timer koji radi u pozadini kako bi se provjerio krajnji datum artikla na happy houru
         private Timer timer;
         public FormVlasnik()
         {

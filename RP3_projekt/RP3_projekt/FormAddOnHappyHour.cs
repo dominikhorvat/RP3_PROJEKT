@@ -45,16 +45,13 @@ namespace RP3_projekt
         {
             //vrijednost za popust
             decimal discount = numericUpDownDiscount.Value;
-
-            //trebam datume!
+            
+            //odabrani datumi i vrijeme
             DateTime timeFrom = dateTimePickerFrom.Value;
             DateTime timeUntil = dateTimePickerUntil.Value;
 
             //provjera jesu li timeFrom i timeUntil različiti
             //i timeFrom < timeUntil barem 6 sati razlike
-
-
-            
             if (timeFrom >= timeUntil)
             {
                 MessageBox.Show("Vrijeme početka mora biti manje od vremena završetka!");
@@ -68,7 +65,6 @@ namespace RP3_projekt
                 return;
             }
 
-            //dodajemo dalje...
             SqlConnection veza = new SqlConnection(connectionString);
             veza.Open();
 

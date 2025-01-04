@@ -27,29 +27,6 @@ namespace RP3_projekt
 
         private void PopuniPadajucuListu()
         {
-            /*string upit = "SELECT DISTINCT category FROM Artikl";
-            List<string> kategorije = new List<string>();
-
-            using (SqlConnection veza = new SqlConnection(connectionString))
-            {
-                SqlCommand command = new SqlCommand(upit, veza);
-                veza.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    kategorije.Add(reader["category"].ToString());
-                }
-                reader.Close();
-            }
-            kategorije.Add("OTHER");
-
-            comboBoxKategorija.Items.AddRange(kategorije.ToArray());*/
-
-            //string[] kategorije = Enum.GetNames(typeof(ItemCategory));
-            //comboBoxKategorija.Items.AddRange(kategorije);
-            //comboBoxKategorija.SelectedIndex = -1;
-
             comboBoxKategorija.DataSource = new BindingSource(ItemCategoryUtility.itemCategoryTranslations, null);
             comboBoxKategorija.DisplayMember = "Value";
             comboBoxKategorija.ValueMember = "Key";
@@ -117,6 +94,7 @@ namespace RP3_projekt
                 }
 
                 //sve je ok!
+                //ubacimo artikl u odgovarajuću tablicu u bazi podataka
                 insertNoviArtikl(naziv,cijena,kategorija);
             }
             else
@@ -127,7 +105,6 @@ namespace RP3_projekt
                                 MessageBoxIcon.Warning);
                 return;
             }
-            //MessageBox.Show("Sve je ok!");
         }
 
         private int provjeriNazivArtikla(string naziv)

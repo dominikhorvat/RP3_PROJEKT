@@ -25,6 +25,9 @@ namespace RP3_projekt
         string connectionString = ConfigurationManager
            .ConnectionStrings["BazaCaffeBar"].ConnectionString;
 
+        /// <summary>
+        /// Metoda koja ispunjava padajući izbornik artiklima iz tablice Artikl
+        /// </summary>
         private void ispuniPadajucuListuArtiklima()
         {
             string upit = "SELECT DISTINCT name FROM Artikl";
@@ -75,6 +78,12 @@ namespace RP3_projekt
             //ispuniNajmanjeProdaniArtikl(pocetniDatum, zavrsniDatum);
         }
 
+        /// <summary>
+        /// Metoda koja ispuni chart
+        /// </summary>
+        /// <param name="naziv">Naziv proizvoda kojeg želimo prikazati</param>
+        /// <param name="pocetak">Početni datum s Month Calendar</param>
+        /// <param name="kraj">Krajnji datum s Month Calendar</param>
         private void ispuniPrikaz(string naziv, DateTime pocetak, DateTime kraj)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -126,6 +135,12 @@ namespace RP3_projekt
             }
         }
 
+        /// <summary>
+        /// Metoda koja ispunjava labelu koja ukazuje na to koliko je ukupno prodano odabaranog artikla u odabranom razdoblju
+        /// </summary>
+        /// <param name="naziv">Naziv artikla za koleg želimo ukupnu količinu</param>
+        /// <param name="pocetak">Početni datum</param>
+        /// <param name="kraj">Završni datum</param>
         private void ispuniLabeluUkupnaPotrosnja(string naziv, DateTime pocetak, DateTime kraj)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -182,6 +197,11 @@ namespace RP3_projekt
             }
         }
 
+        /// <summary>
+        /// Metoda koja prikazuje najviše prodani artikl u odabranom vremenu
+        /// </summary>
+        /// <param name="pocetak">Početni datum</param>
+        /// <param name="kraj">Završni datum</param>
         private void ispuniNajviseProdaniArtikl(DateTime pocetak, DateTime kraj)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -222,46 +242,5 @@ namespace RP3_projekt
                 }
             }
         }
-        /*
-        private void ispuniNajmanjeProdaniArtikl(DateTime pocetak, DateTime kraj)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string upit = @"
-                SELECT 
-                    a.name AS Artikl, 
-                    SUM(sr.quantity) AS UkupnoKolicina
-                FROM 
-                    StavkaRacuna sr
-                INNER JOIN 
-                    Artikl a ON sr.artikl_id = a.Id
-                INNER JOIN 
-                    Racun r ON sr.racun_id = r.Id
-                WHERE 
-                    CONVERT(DATE, r.time) BETWEEN CONVERT(DATE, @DatumPocetka) AND CONVERT(DATE, @DatumKraja)
-                GROUP BY 
-                    a.name
-                ORDER BY 
-                    UkupnoKolicina ASC";
-
-                using (SqlCommand cmd = new SqlCommand(upit, connection))
-                {
-                    cmd.Parameters.AddWithValue("@DatumPocetka", pocetak);
-                    cmd.Parameters.AddWithValue("@DatumKraja", kraj);
-
-                    connection.Open();
-
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            string najprodavanijiArtikl = reader["Artikl"].ToString();
-                            int najprodavanijaKolicina = Convert.ToInt32(reader["UkupnoKolicina"]);
-                            labelNajmanjeProdani.Text = $"Najmanje prodani artikl je {najprodavanijiArtikl} s količinom {najprodavanijaKolicina}.";
-                        }
-                    }
-                }
-            }
-        }*/
     }
 }

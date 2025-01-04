@@ -83,46 +83,42 @@ namespace RP3_projekt
 
                         reader.Close(); //obavezno zatvoriti jer ne možemo unutar iste veze izvršiti više upita
 
-                        //if (employee.LastLogin.Date != DateTime.Today)
-                        //{
-                        //    string updateUpit = "UPDATE Zaposlenik SET " +
-                        //                        "coffee = 2, juice = 1 WHERE " +
-                        //                        "username = @username";
-                        //    using (SqlCommand updateNaredba = new SqlCommand(updateUpit, veza)) //zbog DataReadera
-                        //    {
-                        //        updateNaredba.Parameters.AddWithValue("@username", username);
-                        //        updateNaredba.ExecuteNonQuery();
-                        //    }
-                        //}
+                        if (employee.LastLogin.Date != DateTime.Today)
+                        {
+                            string updateUpit = "UPDATE Zaposlenik SET " +
+                                                "coffee = 2, juice = 1 WHERE " +
+                                                "username = @username";
+                            using (SqlCommand updateNaredba = new SqlCommand(updateUpit, veza)) //zbog DataReadera
+                            {
+                               updateNaredba.Parameters.AddWithValue("@username", username);
+                               updateNaredba.ExecuteNonQuery();
+                            }
+                        }
 
-                        ////trebamo ažurirat last_login na današnji datum i vrijeme
-                        //string updateLastLoginUpit = "UPDATE Zaposlenik SET " +
-                        //                            "last_login = @trenutnoVrijeme WHERE " +
-                        //                            "username = @username";
-                        //using (SqlCommand updateNaredba = new SqlCommand(updateLastLoginUpit, veza))
-                        //{
-                        //    updateNaredba.Parameters.AddWithValue("@trenutnoVrijeme", DateTime.Now);
-                        //    updateNaredba.Parameters.AddWithValue("@username", username);
-                        //    updateNaredba.ExecuteNonQuery();
-                        //}
+                        //trebamo ažurirat last_login na današnji datum i vrijeme
+                        string updateLastLoginUpit = "UPDATE Zaposlenik SET " +
+                                                    "last_login = @trenutnoVrijeme WHERE " +
+                                                    "username = @username";
+                        using (SqlCommand updateNaredba = new SqlCommand(updateLastLoginUpit, veza))
+                        {
+                            updateNaredba.Parameters.AddWithValue("@trenutnoVrijeme", DateTime.Now);
+                            updateNaredba.Parameters.AddWithValue("@username", username);
+                            updateNaredba.ExecuteNonQuery();
+                        }
 
                         if (employee.Authorization == "Konobar")
                         {
                             FormKonobar formaKonobar = new FormKonobar(employee);
-                            //Hide(); //sakrivamo formu za login kad je pokrenuta nova forma
                             Visible = false;
                             formaKonobar.ShowDialog();
                             Visible = true;
-                            //Close();
                         }
                         else //ovlast je "Vlasnik"
                         {
                             FormVlasnik formaVlasnik = new FormVlasnik();
-                            //Hide(); //sakrivamo formu za login kad je pokrenuta nova forma
                             Visible = false;
                             formaVlasnik.ShowDialog();
                             Visible = true;
-                            //Close(); 
                         }
                     }
                     else
@@ -133,6 +129,11 @@ namespace RP3_projekt
             }
         }
 
+        /// <summary>
+        /// Metoda koja hashira lozinku
+        /// </summary>
+        /// <param name="password">Prima lozinku za hash</param>
+        /// <returns>Vraća hashiranu lozinku</returns>
         private string Hash(string password)
         {
             var bytes = new UTF8Encoding().GetBytes(password);

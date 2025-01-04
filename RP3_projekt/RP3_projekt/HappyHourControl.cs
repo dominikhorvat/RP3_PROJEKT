@@ -25,6 +25,9 @@ namespace RP3_projekt
         string connectionString = ConfigurationManager
             .ConnectionStrings["BazaCaffeBar"].ConnectionString;
 
+        /// <summary>
+        /// Metoda koja puni data grid view svim artiklima koji se nalaze u tablici Artikl u bazi podataka
+        /// </summary>
         private void ReadArtikl()
         {
             SqlConnection veza = new SqlConnection(connectionString); 
@@ -65,6 +68,9 @@ namespace RP3_projekt
             veza.Close();
         }
 
+        /// <summary>
+        /// Metoda koja puni data grid view svim artiklima koji se nalaze u tablici HappyHour u bazi podataka
+        /// </summary>
         private void ReadArtiklHH()
         {
             SqlConnection veza = new SqlConnection(connectionString);
@@ -92,7 +98,7 @@ namespace RP3_projekt
 
         private void buttonDodaj_Click(object sender, EventArgs e)
         {
-            // Provjera je li selektiran barem jedan red
+            // Provjera je li odabran barem jedan redak
             if (this.dgvSviArtikli.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Molimo odaberite red iz tablice.", 
@@ -133,7 +139,7 @@ namespace RP3_projekt
 
             FormAddOnHappyHour prikaz = new FormAddOnHappyHour();
 
-            //da popunim info one forme!
+            //popunimo info one forme koja će se naknadno otvoriti (FormAddOnHappyHour.cs)
             prikaz.IdArtikla = idArtikla;
             prikaz.FillInfoArtikl(priceArtikl, nameArtikl, freezerQuantity, storageQuantity);
 
@@ -147,7 +153,7 @@ namespace RP3_projekt
 
         private void buttonMakni_Click(object sender, EventArgs e)
         {
-            //nepotrebna provjera s obzirom na properties data view grid-a, ali za svaki slucaj
+            //provjerimo za svaki slučaj ako nešto krene po krivu je li odabran redak
             if (dgvArtikliHH.CurrentRow == null || dgvArtikliHH.CurrentRow.Index == -1)
             {
                 MessageBox.Show("Molimo odaberite valjani redak za brisanje.", 

@@ -103,6 +103,11 @@ namespace RP3_projekt
             this.DialogResult = DialogResult.Cancel;
         }
 
+        /// <summary>
+        /// Metoda koja hashira lozinku
+        /// </summary>
+        /// <param name="password">Lozinka koja se šalje metodi kako bi se hashirala</param>
+        /// <returns>vraća hash lozinke</returns>
         private string Hash(string password)
         {
             var bytes = new UTF8Encoding().GetBytes(password);
