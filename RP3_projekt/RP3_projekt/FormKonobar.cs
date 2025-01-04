@@ -17,6 +17,7 @@ namespace RP3_projekt
     {
         private Employee currentEmployee;
         public Timer timer;
+        private Button selectedButton;
 
         public FormKonobar(Employee currentEmployee)
         {
@@ -29,10 +30,10 @@ namespace RP3_projekt
 
             this.currentEmployee = currentEmployee;
 
-            NotificationsService.Initialize(notificationsBtn);
+            NotificationsService.Initialize(notificationPictureBox);
 
             BillsControl control = new BillsControl(currentEmployee);
-            ShowControl(control);
+            ShowControl(control, billsBtn);
         }
 
         public void StopTimer()
@@ -69,38 +70,54 @@ namespace RP3_projekt
         private void billsBtn_Click(object sender, EventArgs e)
         {
             BillsControl control = new BillsControl(currentEmployee);
-            ShowControl(control);
+            ShowControl(control, billsBtn);
         }
 
         private void freezerBtn_Click(object sender, EventArgs e)
         {
             FreezerControl control = new FreezerControl();
-            ShowControl(control);
+            ShowControl(control, freezerBtn);
         }
 
         private void storageBtn_Click(object sender, EventArgs e)
         {
             StorageControl control = new StorageControl();
-            ShowControl(control);
+            ShowControl(control, storageBtn);
         }
 
         private void shiftEndBtn_Click(object sender, EventArgs e)
         {
             ShiftEndControl control = new ShiftEndControl(currentEmployee, this);
-            ShowControl(control);
+            ShowControl(control, shiftEndBtn);
         }
 
-        private void notificationsBtn_Click(object sender, EventArgs e)
+        private void notificationPictureBox_Click(object sender, EventArgs e)
         {
             NotificationsControl control = new NotificationsControl();
-            ShowControl(control);
+            ShowControl(control, null);
         }
 
-        private void ShowControl(UserControl control)
+        private void ShowControl(UserControl control, Button button)
         {
             panelContent.Controls.Clear();
             control.Dock = DockStyle.Fill;
             panelContent.Controls.Add(control);
+
+            if (button != null)
+            {
+                UpdateSelectedButton(button);
+            }
+        }
+
+        private void UpdateSelectedButton(Button button)
+        {
+            if (selectedButton != null)
+            {
+                selectedButton.ForeColor = Color.White;
+            }
+
+            button.ForeColor = Color.Black;
+            selectedButton = button;
         }
     }
 }

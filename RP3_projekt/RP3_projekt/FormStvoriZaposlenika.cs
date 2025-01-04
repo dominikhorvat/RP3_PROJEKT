@@ -44,6 +44,12 @@ namespace RP3_projekt
                 return;
             }
 
+            if(textBoxPassword.Text != textBoxPasswordConfirm.Text)
+            {
+                MessageBox.Show("Unesene lozinke se ne podudaraju!");
+                return;
+            }
+
             string zaposlenik_username = textBoxUsername.Text;
             string zaposlenik_password = Hash(textBoxPassword.Text.ToString()); 
 

@@ -20,11 +20,11 @@ namespace RP3_projekt
 
 		private static List<Notification> _notifications = new List<Notification>();
 
-		private static Button notificationsBtn = null;
+		private static PictureBox notificationPictureBox = null;
 
-		public static void Initialize(Button btn)
+		public static void Initialize(PictureBox pictureBox)
         {
-			notificationsBtn = btn;
+			notificationPictureBox = pictureBox;
 			_notifications = PopulateNotifications();
 			toggleBtnVisibility();
 		}
@@ -184,9 +184,9 @@ namespace RP3_projekt
 
 		private static void toggleBtnVisibility()
 		{
-			if(notificationsBtn != null)
+			if(notificationPictureBox != null)
 			{
-				notificationsBtn.Visible = _notifications.Count > 0;
+				notificationPictureBox.Visible = _notifications.Count > 0;
 			}
 		}
 	}

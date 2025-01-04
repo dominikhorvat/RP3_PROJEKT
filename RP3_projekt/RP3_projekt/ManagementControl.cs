@@ -43,7 +43,7 @@ namespace RP3_projekt
             dataGridViewChangePrice.Columns["id"].HeaderText = "#";
             dataGridViewChangePrice.Columns["category"].HeaderText = "Kategorija";
             dataGridViewChangePrice.Columns["name"].HeaderText = "Naziv artikla";
-            dataGridViewChangePrice.Columns["price"].HeaderText = "Cijena";
+            dataGridViewChangePrice.Columns["price"].HeaderText = "Cijena (€)";
             dataGridViewChangePrice.Columns["freezer_quantity"].HeaderText = "Stanje hladnjaka";
             dataGridViewChangePrice.Columns["storage_quantity"].HeaderText = "Stanje skladišta";
 
@@ -150,19 +150,15 @@ namespace RP3_projekt
             int artiklDeleteId = int.Parse(val);
 
             DialogResult dialogResult =
-                MessageBox.Show("Želite li sigurno maknuti artikl iz ponude?",
-                "Brisanje artikla",
-                MessageBoxButtons.YesNo);
+                CustomMessageBox.Show("Želite li sigurno maknuti artikl iz ponude?", "Brisanje artikla");
 
-            if (dialogResult == DialogResult.No)
+            if (dialogResult == DialogResult.Yes)
             {
-                return;
+                //dialogResult == DialogResult.Yes -> mičemo artikl s Tablice Artikl
+                deleteArtiklFromCaffe(artiklDeleteId);
+
+                ReadArtikl();
             }
-
-            //dialogResult == DialogResult.Yes -> mičemo artikl s Tablice Artikl
-            deleteArtiklFromCaffe(artiklDeleteId);
-
-            ReadArtikl();
         }
 
         private void deleteArtiklFromCaffe(int artiklDeleteId)

@@ -144,6 +144,16 @@ namespace RP3_projekt
             return Convert.ToBase64String(hashBytes);
         }
 
+        private void FormPrijava_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //Događaj za crtanje pozadine
         private void Prijava_Paint(object sender, PaintEventArgs e)
         {

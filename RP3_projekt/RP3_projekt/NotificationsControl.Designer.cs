@@ -33,11 +33,13 @@
             // 
             // notificationsView
             // 
+            this.notificationsView.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notificationsView.FormattingEnabled = true;
             this.notificationsView.HorizontalScrollbar = true;
+            this.notificationsView.ItemHeight = 20;
             this.notificationsView.Location = new System.Drawing.Point(34, 45);
             this.notificationsView.Name = "notificationsView";
-            this.notificationsView.Size = new System.Drawing.Size(498, 420);
+            this.notificationsView.Size = new System.Drawing.Size(590, 544);
             this.notificationsView.TabIndex = 0;
             // 
             // NotificationsControl
@@ -46,7 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.notificationsView);
             this.Name = "NotificationsControl";
-            this.Size = new System.Drawing.Size(574, 594);
+            this.Size = new System.Drawing.Size(669, 652);
             this.ResumeLayout(false);
 
         }

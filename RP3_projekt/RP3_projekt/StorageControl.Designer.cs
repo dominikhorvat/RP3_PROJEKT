@@ -39,9 +39,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(156, 16);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(194, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 13);
+            this.label1.Size = new System.Drawing.Size(306, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Odaberite artikl i količinu za dodati u skladište";
             // 
@@ -51,17 +52,18 @@
             this.storageItemsView.AllowUserToDeleteRows = false;
             this.storageItemsView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.storageItemsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.storageItemsView.Location = new System.Drawing.Point(38, 52);
+            this.storageItemsView.Location = new System.Drawing.Point(40, 111);
             this.storageItemsView.MultiSelect = false;
             this.storageItemsView.Name = "storageItemsView";
             this.storageItemsView.ReadOnly = true;
             this.storageItemsView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.storageItemsView.Size = new System.Drawing.Size(450, 275);
-            this.storageItemsView.TabIndex = 1;
+            this.storageItemsView.Size = new System.Drawing.Size(579, 325);
+            this.storageItemsView.TabIndex = 4;
             // 
             // itemQuantity
             // 
-            this.itemQuantity.Location = new System.Drawing.Point(187, 358);
+            this.itemQuantity.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemQuantity.Location = new System.Drawing.Point(259, 469);
             this.itemQuantity.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -73,8 +75,8 @@
             0,
             0});
             this.itemQuantity.Name = "itemQuantity";
-            this.itemQuantity.Size = new System.Drawing.Size(143, 20);
-            this.itemQuantity.TabIndex = 2;
+            this.itemQuantity.Size = new System.Drawing.Size(134, 23);
+            this.itemQuantity.TabIndex = 5;
             this.itemQuantity.Value = new decimal(new int[] {
             1,
             0,
@@ -83,12 +85,15 @@
             // 
             // addItemBtn
             // 
-            this.addItemBtn.Location = new System.Drawing.Point(187, 405);
+            this.addItemBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
+            this.addItemBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addItemBtn.ForeColor = System.Drawing.Color.White;
+            this.addItemBtn.Location = new System.Drawing.Point(244, 508);
             this.addItemBtn.Name = "addItemBtn";
-            this.addItemBtn.Size = new System.Drawing.Size(143, 33);
-            this.addItemBtn.TabIndex = 3;
+            this.addItemBtn.Size = new System.Drawing.Size(169, 43);
+            this.addItemBtn.TabIndex = 6;
             this.addItemBtn.Text = "Dodaj artikl u skladište";
-            this.addItemBtn.UseVisualStyleBackColor = true;
+            this.addItemBtn.UseVisualStyleBackColor = false;
             this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
             // 
             // StorageControl
@@ -100,7 +105,7 @@
             this.Controls.Add(this.storageItemsView);
             this.Controls.Add(this.label1);
             this.Name = "StorageControl";
-            this.Size = new System.Drawing.Size(535, 475);
+            this.Size = new System.Drawing.Size(669, 652);
             ((System.ComponentModel.ISupportInitialize)(this.storageItemsView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemQuantity)).EndInit();
             this.ResumeLayout(false);

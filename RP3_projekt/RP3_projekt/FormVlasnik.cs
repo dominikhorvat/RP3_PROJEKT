@@ -14,6 +14,7 @@ namespace RP3_projekt
 {
     public partial class FormVlasnik : Form
     {
+        private Button selectedButton = null;
         private Timer timer;
         public FormVlasnik()
         {
@@ -25,7 +26,7 @@ namespace RP3_projekt
             timer.Start();
 
             ManagementControl managementCon = new ManagementControl();
-            ShowControl(managementCon);
+            ShowControl(managementCon, btnUpravljajArtiklima);
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -56,52 +57,51 @@ namespace RP3_projekt
         private void btnZaposlenici_Click(object sender, EventArgs e)
         {
             EmployeeControl employeeCon = new EmployeeControl();
-            ShowControl(employeeCon);
+            ShowControl(employeeCon, btnZaposlenici);
         }
 
         private void btnHappyHour_Click(object sender, EventArgs e)
         {
             HappyHourControl happyhourCon = new HappyHourControl();
-            ShowControl(happyhourCon);
+            ShowControl(happyhourCon, btnHappyHour);
         }
 
         private void btnUpravljajArtiklima_Click(object sender, EventArgs e)
         {
             ManagementControl managementCon = new ManagementControl();
-            ShowControl(managementCon);
+            ShowControl(managementCon, btnUpravljajArtiklima);
         }
 
         private void btnPotrosnja_Click(object sender, EventArgs e)
         {
             ConsuptionControl consuptionControl = new ConsuptionControl();
-            ShowControl(consuptionControl); 
+            ShowControl(consuptionControl, btnPotrosnja); 
         }
 
         private void btnDodajNoviArtikl_Click(object sender, EventArgs e)
         {
             AddNewArtiklControl addNewArtiklControl = new AddNewArtiklControl();
-            ShowControl(addNewArtiklControl);
+            ShowControl(addNewArtiklControl, btnDodajNoviArtikl);
         }
 
-        private void ShowControl(UserControl control)
+        private void ShowControl(UserControl control, Button button)
         {
             panelContent.Controls.Clear();
             control.Dock = DockStyle.Fill;
             panelContent.Controls.Add(control);
+            UpdateSelectedButton(button);
         }
 
         private void pictureBoxInfoIcon_Click(object sender, EventArgs e)
         {
             VlasnikInfoControl vlasnikInfoCon = new VlasnikInfoControl();
-            ShowControl(vlasnikInfoCon);
+            ShowControl(vlasnikInfoCon, null);
         }
 
         private void pictureBoxLogoutIcon_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Želite li se odjaviti iz aplikacije?",
-                                   "Odjava",
-                                   MessageBoxButtons.YesNo,
-                                   MessageBoxIcon.Question);
+            DialogResult dialogResult = CustomMessageBox.Show("Želite li se odjaviti iz aplikacije?",
+                                   "Odjava");
             if (dialogResult == DialogResult.Yes)
             {
                 //zaustavimo prvo timer, iako ne treba jer se odnosi samo na ovu formu, nije na odmet
@@ -110,6 +110,19 @@ namespace RP3_projekt
 
                 Close();
             }
+        }
+
+        private void UpdateSelectedButton(Button button)
+        {
+            if (selectedButton != null)
+            {
+                selectedButton.ForeColor = Color.White;
+            }
+            if (button != null)
+            {
+                button.ForeColor = Color.Black;
+            }
+            selectedButton = button;
         }
     }
 }

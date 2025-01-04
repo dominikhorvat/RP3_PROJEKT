@@ -416,9 +416,11 @@ namespace RP3_projekt
             float y = 100;
 
             e.Graphics.DrawString($"Račun #{bill.Id}", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, x, y);
-            y += lineHeight;
+            y += lineHeight * 2;
 
-            e.Graphics.DrawString("Izdao '" + bill.Employee.Username + "' u " + bill.Time, font, Brushes.Black, x, y);
+            e.Graphics.DrawString("vrijeme: " + bill.Time, font, Brushes.Black, x, y);
+            y += lineHeight;
+            e.Graphics.DrawString("izdao: '" + bill.Employee.Username + "'", font, Brushes.Black, x, y);
             y += lineHeight * 2;
 
             e.Graphics.DrawString("Artikl", new Font(font, FontStyle.Bold), Brushes.Black, x, y);

@@ -45,10 +45,11 @@ namespace RP3_projekt
             //dataGridViewEmployee.Columns["id"].HeaderText = "#";
             dataGridViewEmployee.Columns["id"].Visible = false;
             dataGridViewEmployee.Columns["username"].HeaderText = "Korisničko ime";
-            dataGridViewEmployee.Columns["hash_password"].HeaderText = "Hash lozinka";
+            //dataGridViewEmployee.Columns["hash_password"].HeaderText = "Hash lozinka";
+            dataGridViewEmployee.Columns["hash_password"].Visible = false;
             dataGridViewEmployee.Columns["authorization"].HeaderText = "Ovlast";
-            dataGridViewEmployee.Columns["coffee"].HeaderText = "Preostala kava";
-            dataGridViewEmployee.Columns["juice"].HeaderText = "Preostali sok";
+            dataGridViewEmployee.Columns["coffee"].HeaderText = "Preostala besplatna kava";
+            dataGridViewEmployee.Columns["juice"].HeaderText = "Preostali besplatni sok";
             dataGridViewEmployee.Columns["last_login"].HeaderText = "Posljednja prijava u sustav";
 
             dataGridViewEmployee.ResumeLayout();
@@ -84,19 +85,15 @@ namespace RP3_projekt
             int employeeId = int.Parse(val);
 
             DialogResult dialogResult =
-                MessageBox.Show("Jeste li sigurni da želite dati otkaz odabranom konobaru?",
-                                "Otkaz konobara",
-                                MessageBoxButtons.YesNo,
-                                MessageBoxIcon.Question);
+                CustomMessageBox.Show("Jeste li sigurni da želite dati otkaz\nodabranom konobaru?",
+                                "Otkaz konobara");
 
-            if (dialogResult == DialogResult.No)
+            if (dialogResult == DialogResult.Yes)
             {
-                return;
+                deleteFromEmployee(employeeId);
+
+                ReadAllEmployees();
             }
-
-            deleteFromEmployee(employeeId);
-
-            ReadAllEmployees();
         }
 
         private void deleteFromEmployee(int idEmployee)

@@ -78,6 +78,12 @@
     <Compile Include="ConsuptionControl.Designer.cs">
       <DependentUpon>ConsuptionControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Discount.cs" />
     <Compile Include="EmployeeControl.cs">
       <SubType>UserControl</SubType>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsuptionControl.resx">
       <DependentUpon>ConsuptionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeControl.resx">
       <DependentUpon>EmployeeControl.cs</DependentUpon>

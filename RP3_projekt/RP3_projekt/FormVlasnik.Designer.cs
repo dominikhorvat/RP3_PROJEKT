@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVlasnik));
             this.panelSidebar = new System.Windows.Forms.Panel();
+            this.btnPotrosnja = new System.Windows.Forms.Button();
+            this.btnHappyHour = new System.Windows.Forms.Button();
             this.pictureBoxLogoutIcon = new System.Windows.Forms.PictureBox();
+            this.btnZaposlenici = new System.Windows.Forms.Button();
             this.btnDodajNoviArtikl = new System.Windows.Forms.Button();
             this.pictureBoxInfoIcon = new System.Windows.Forms.PictureBox();
             this.btnUpravljajArtiklima = new System.Windows.Forms.Button();
-            this.btnPotrosnja = new System.Windows.Forms.Button();
-            this.btnHappyHour = new System.Windows.Forms.Button();
-            this.btnZaposlenici = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
             this.panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoutIcon)).BeginInit();
@@ -44,116 +45,148 @@
             // 
             // panelSidebar
             // 
-            this.panelSidebar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(207)))), ((int)(((byte)(207)))));
+            this.panelSidebar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSidebar.Controls.Add(this.btnPotrosnja);
+            this.panelSidebar.Controls.Add(this.btnHappyHour);
             this.panelSidebar.Controls.Add(this.pictureBoxLogoutIcon);
+            this.panelSidebar.Controls.Add(this.btnZaposlenici);
             this.panelSidebar.Controls.Add(this.btnDodajNoviArtikl);
             this.panelSidebar.Controls.Add(this.pictureBoxInfoIcon);
             this.panelSidebar.Controls.Add(this.btnUpravljajArtiklima);
-            this.panelSidebar.Controls.Add(this.btnPotrosnja);
-            this.panelSidebar.Controls.Add(this.btnHappyHour);
-            this.panelSidebar.Controls.Add(this.btnZaposlenici);
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSidebar.Location = new System.Drawing.Point(0, 0);
+            this.panelSidebar.Margin = new System.Windows.Forms.Padding(2);
             this.panelSidebar.Name = "panelSidebar";
-            this.panelSidebar.Size = new System.Drawing.Size(259, 803);
+            this.panelSidebar.Size = new System.Drawing.Size(199, 652);
             this.panelSidebar.TabIndex = 0;
+            // 
+            // btnPotrosnja
+            // 
+            this.btnPotrosnja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
+            this.btnPotrosnja.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPotrosnja.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPotrosnja.ForeColor = System.Drawing.Color.White;
+            this.btnPotrosnja.Location = new System.Drawing.Point(0, 212);
+            this.btnPotrosnja.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPotrosnja.Name = "btnPotrosnja";
+            this.btnPotrosnja.Size = new System.Drawing.Size(197, 53);
+            this.btnPotrosnja.TabIndex = 4;
+            this.btnPotrosnja.Text = "Potrošnja";
+            this.btnPotrosnja.UseVisualStyleBackColor = false;
+            this.btnPotrosnja.Click += new System.EventHandler(this.btnPotrosnja_Click);
+            // 
+            // btnHappyHour
+            // 
+            this.btnHappyHour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
+            this.btnHappyHour.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHappyHour.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHappyHour.ForeColor = System.Drawing.Color.White;
+            this.btnHappyHour.Location = new System.Drawing.Point(0, 159);
+            this.btnHappyHour.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHappyHour.Name = "btnHappyHour";
+            this.btnHappyHour.Size = new System.Drawing.Size(197, 53);
+            this.btnHappyHour.TabIndex = 3;
+            this.btnHappyHour.Text = "Happy Hour";
+            this.btnHappyHour.UseVisualStyleBackColor = false;
+            this.btnHappyHour.Click += new System.EventHandler(this.btnHappyHour_Click);
             // 
             // pictureBoxLogoutIcon
             // 
             this.pictureBoxLogoutIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBoxLogoutIcon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBoxLogoutIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxLogoutIcon.Image = global::RP3_projekt.Properties.Resources.logouticon;
-            this.pictureBoxLogoutIcon.Location = new System.Drawing.Point(204, 742);
+            this.pictureBoxLogoutIcon.Location = new System.Drawing.Point(153, 603);
+            this.pictureBoxLogoutIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxLogoutIcon.Name = "pictureBoxLogoutIcon";
-            this.pictureBoxLogoutIcon.Size = new System.Drawing.Size(49, 49);
+            this.pictureBoxLogoutIcon.Size = new System.Drawing.Size(38, 41);
             this.pictureBoxLogoutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLogoutIcon.TabIndex = 6;
             this.pictureBoxLogoutIcon.TabStop = false;
             this.pictureBoxLogoutIcon.Click += new System.EventHandler(this.pictureBoxLogoutIcon_Click);
             // 
+            // btnZaposlenici
+            // 
+            this.btnZaposlenici.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
+            this.btnZaposlenici.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnZaposlenici.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnZaposlenici.ForeColor = System.Drawing.Color.White;
+            this.btnZaposlenici.Location = new System.Drawing.Point(0, 106);
+            this.btnZaposlenici.Margin = new System.Windows.Forms.Padding(2);
+            this.btnZaposlenici.Name = "btnZaposlenici";
+            this.btnZaposlenici.Size = new System.Drawing.Size(197, 53);
+            this.btnZaposlenici.TabIndex = 2;
+            this.btnZaposlenici.Text = "Zaposlenici";
+            this.btnZaposlenici.UseVisualStyleBackColor = false;
+            this.btnZaposlenici.Click += new System.EventHandler(this.btnZaposlenici_Click);
+            // 
             // btnDodajNoviArtikl
             // 
-            this.btnDodajNoviArtikl.Location = new System.Drawing.Point(55, 197);
+            this.btnDodajNoviArtikl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
+            this.btnDodajNoviArtikl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDodajNoviArtikl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodajNoviArtikl.ForeColor = System.Drawing.Color.White;
+            this.btnDodajNoviArtikl.Location = new System.Drawing.Point(0, 53);
+            this.btnDodajNoviArtikl.Margin = new System.Windows.Forms.Padding(2);
             this.btnDodajNoviArtikl.Name = "btnDodajNoviArtikl";
-            this.btnDodajNoviArtikl.Size = new System.Drawing.Size(136, 46);
-            this.btnDodajNoviArtikl.TabIndex = 5;
-            this.btnDodajNoviArtikl.Text = "Dodaj novi artikl";
-            this.btnDodajNoviArtikl.UseVisualStyleBackColor = true;
+            this.btnDodajNoviArtikl.Size = new System.Drawing.Size(197, 53);
+            this.btnDodajNoviArtikl.TabIndex = 1;
+            this.btnDodajNoviArtikl.Text = "Novi artikl";
+            this.btnDodajNoviArtikl.UseVisualStyleBackColor = false;
             this.btnDodajNoviArtikl.Click += new System.EventHandler(this.btnDodajNoviArtikl_Click);
             // 
             // pictureBoxInfoIcon
             // 
             this.pictureBoxInfoIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBoxInfoIcon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBoxInfoIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxInfoIcon.Image = global::RP3_projekt.Properties.Resources.infoicon;
-            this.pictureBoxInfoIcon.Location = new System.Drawing.Point(12, 742);
+            this.pictureBoxInfoIcon.Location = new System.Drawing.Point(9, 603);
+            this.pictureBoxInfoIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxInfoIcon.Name = "pictureBoxInfoIcon";
-            this.pictureBoxInfoIcon.Size = new System.Drawing.Size(49, 49);
+            this.pictureBoxInfoIcon.Size = new System.Drawing.Size(38, 41);
             this.pictureBoxInfoIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxInfoIcon.TabIndex = 4;
+            this.pictureBoxInfoIcon.TabIndex = 5;
             this.pictureBoxInfoIcon.TabStop = false;
             this.pictureBoxInfoIcon.Click += new System.EventHandler(this.pictureBoxInfoIcon_Click);
             // 
             // btnUpravljajArtiklima
             // 
-            this.btnUpravljajArtiklima.Location = new System.Drawing.Point(55, 91);
+            this.btnUpravljajArtiklima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
+            this.btnUpravljajArtiklima.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUpravljajArtiklima.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpravljajArtiklima.ForeColor = System.Drawing.Color.White;
+            this.btnUpravljajArtiklima.Location = new System.Drawing.Point(0, 0);
+            this.btnUpravljajArtiklima.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpravljajArtiklima.Name = "btnUpravljajArtiklima";
-            this.btnUpravljajArtiklima.Size = new System.Drawing.Size(136, 45);
-            this.btnUpravljajArtiklima.TabIndex = 3;
-            this.btnUpravljajArtiklima.Text = "Upravljaj artiklima";
-            this.btnUpravljajArtiklima.UseVisualStyleBackColor = true;
+            this.btnUpravljajArtiklima.Size = new System.Drawing.Size(197, 53);
+            this.btnUpravljajArtiklima.TabIndex = 0;
+            this.btnUpravljajArtiklima.Text = "Artikli";
+            this.btnUpravljajArtiklima.UseVisualStyleBackColor = false;
             this.btnUpravljajArtiklima.Click += new System.EventHandler(this.btnUpravljajArtiklima_Click);
-            // 
-            // btnPotrosnja
-            // 
-            this.btnPotrosnja.Location = new System.Drawing.Point(55, 529);
-            this.btnPotrosnja.Name = "btnPotrosnja";
-            this.btnPotrosnja.Size = new System.Drawing.Size(136, 44);
-            this.btnPotrosnja.TabIndex = 2;
-            this.btnPotrosnja.Text = "Potrošnja";
-            this.btnPotrosnja.UseVisualStyleBackColor = true;
-            this.btnPotrosnja.Click += new System.EventHandler(this.btnPotrosnja_Click);
-            // 
-            // btnHappyHour
-            // 
-            this.btnHappyHour.Location = new System.Drawing.Point(55, 423);
-            this.btnHappyHour.Name = "btnHappyHour";
-            this.btnHappyHour.Size = new System.Drawing.Size(136, 44);
-            this.btnHappyHour.TabIndex = 1;
-            this.btnHappyHour.Text = "Happy Hour";
-            this.btnHappyHour.UseVisualStyleBackColor = true;
-            this.btnHappyHour.Click += new System.EventHandler(this.btnHappyHour_Click);
-            // 
-            // btnZaposlenici
-            // 
-            this.btnZaposlenici.Location = new System.Drawing.Point(55, 305);
-            this.btnZaposlenici.Name = "btnZaposlenici";
-            this.btnZaposlenici.Size = new System.Drawing.Size(136, 46);
-            this.btnZaposlenici.TabIndex = 0;
-            this.btnZaposlenici.Text = "Zaposlenici";
-            this.btnZaposlenici.UseVisualStyleBackColor = true;
-            this.btnZaposlenici.Click += new System.EventHandler(this.btnZaposlenici_Click);
             // 
             // panelContent
             // 
+            this.panelContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(259, 0);
+            this.panelContent.Location = new System.Drawing.Point(199, 0);
+            this.panelContent.Margin = new System.Windows.Forms.Padding(2);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(898, 803);
-            this.panelContent.TabIndex = 1;
+            this.panelContent.Size = new System.Drawing.Size(669, 652);
+            this.panelContent.TabIndex = 0;
             // 
             // FormVlasnik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 803);
+            this.ClientSize = new System.Drawing.Size(868, 652);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelSidebar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "FormVlasnik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Forma za vlasnika";
+            this.Text = "Caffe Bar - vlasnik";
             this.panelSidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoutIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfoIcon)).EndInit();
@@ -167,10 +200,10 @@
         private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.Button btnHappyHour;
         private System.Windows.Forms.Button btnZaposlenici;
-        private System.Windows.Forms.Button btnPotrosnja;
         private System.Windows.Forms.Button btnUpravljajArtiklima;
         private System.Windows.Forms.PictureBox pictureBoxInfoIcon;
         private System.Windows.Forms.Button btnDodajNoviArtikl;
         private System.Windows.Forms.PictureBox pictureBoxLogoutIcon;
+        private System.Windows.Forms.Button btnPotrosnja;
     }
 }

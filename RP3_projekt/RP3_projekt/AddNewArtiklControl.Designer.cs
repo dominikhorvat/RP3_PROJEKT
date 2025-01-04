@@ -42,94 +42,105 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(46, 38);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(175, 146);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(368, 20);
+            this.label1.Size = new System.Drawing.Size(319, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Unesite informacije o novom artiklu za Caffe bar";
+            this.label1.Text = "Unesite informacije o novom artiklu za Caffe Bar";
             // 
             // btnDodaj
             // 
             this.btnDodaj.AutoSize = true;
-            this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDodaj.Location = new System.Drawing.Point(264, 258);
+            this.btnDodaj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
+            this.btnDodaj.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodaj.ForeColor = System.Drawing.Color.White;
+            this.btnDodaj.Location = new System.Drawing.Point(270, 331);
+            this.btnDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(75, 30);
-            this.btnDodaj.TabIndex = 1;
+            this.btnDodaj.Size = new System.Drawing.Size(122, 46);
+            this.btnDodaj.TabIndex = 10;
             this.btnDodaj.Text = "Dodaj";
-            this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.UseVisualStyleBackColor = false;
             this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(46, 94);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(175, 196);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 20);
+            this.label2.Size = new System.Drawing.Size(48, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Naziv:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(46, 144);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(175, 240);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 20);
+            this.label3.Size = new System.Drawing.Size(54, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Cijena:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(46, 196);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(175, 281);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 20);
+            this.label4.Size = new System.Drawing.Size(79, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Kategorija:";
             // 
             // textBoxNaziv
             // 
-            this.textBoxNaziv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxNaziv.Location = new System.Drawing.Point(160, 94);
+            this.textBoxNaziv.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNaziv.Location = new System.Drawing.Point(284, 193);
+            this.textBoxNaziv.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNaziv.Name = "textBoxNaziv";
-            this.textBoxNaziv.Size = new System.Drawing.Size(179, 27);
-            this.textBoxNaziv.TabIndex = 5;
+            this.textBoxNaziv.Size = new System.Drawing.Size(135, 23);
+            this.textBoxNaziv.TabIndex = 7;
             // 
             // textBoxCijena
             // 
-            this.textBoxCijena.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxCijena.Location = new System.Drawing.Point(160, 141);
+            this.textBoxCijena.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCijena.Location = new System.Drawing.Point(284, 234);
+            this.textBoxCijena.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCijena.Name = "textBoxCijena";
-            this.textBoxCijena.Size = new System.Drawing.Size(179, 27);
-            this.textBoxCijena.TabIndex = 6;
+            this.textBoxCijena.Size = new System.Drawing.Size(135, 23);
+            this.textBoxCijena.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(345, 144);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(437, 237);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 20);
+            this.label5.Size = new System.Drawing.Size(57, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "eura (€)";
             // 
             // comboBoxKategorija
             // 
             this.comboBoxKategorija.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxKategorija.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.comboBoxKategorija.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxKategorija.FormattingEnabled = true;
-            this.comboBoxKategorija.Location = new System.Drawing.Point(160, 193);
+            this.comboBoxKategorija.Location = new System.Drawing.Point(284, 278);
+            this.comboBoxKategorija.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxKategorija.Name = "comboBoxKategorija";
-            this.comboBoxKategorija.Size = new System.Drawing.Size(179, 28);
+            this.comboBoxKategorija.Size = new System.Drawing.Size(135, 25);
             this.comboBoxKategorija.TabIndex = 9;
             // 
             // AddNewArtiklControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.comboBoxKategorija);
             this.Controls.Add(this.label5);
@@ -140,8 +151,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddNewArtiklControl";
-            this.Size = new System.Drawing.Size(718, 517);
+            this.Size = new System.Drawing.Size(669, 652);
             this.ResumeLayout(false);
             this.PerformLayout();
 

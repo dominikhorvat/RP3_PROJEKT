@@ -43,7 +43,7 @@ namespace RP3_projekt
             dgvSviArtikli.Columns["id"].HeaderText = "#";
             dgvSviArtikli.Columns["category"].HeaderText = "Kategorija";
             dgvSviArtikli.Columns["name"].HeaderText = "Naziv artikla";
-            dgvSviArtikli.Columns["price"].HeaderText = "Cijena";
+            dgvSviArtikli.Columns["price"].HeaderText = "Cijena (€)";
             dgvSviArtikli.Columns["freezer_quantity"].HeaderText = "Stanje hladnjaka";
             dgvSviArtikli.Columns["storage_quantity"].HeaderText = "Stanje skladišta";
 
@@ -81,7 +81,7 @@ namespace RP3_projekt
             dgvArtikliHH.DataSource = dt;
 
             dgvArtikliHH.Columns["artikl_id"].HeaderText = "ID artikla (#)";
-            dgvArtikliHH.Columns["discount"].HeaderText = "Popust na happy hour-u";
+            dgvArtikliHH.Columns["discount"].HeaderText = "Popust na happy hour-u (%)";
             dgvArtikliHH.Columns["time_from"].HeaderText = "Početak popusta";
             dgvArtikliHH.Columns["time_until"].HeaderText = "Kraj popusta";
 
@@ -120,7 +120,7 @@ namespace RP3_projekt
 
                     if (brojPostojecih > 0)
                     {
-                        MessageBox.Show("Artikl se već nalazi na Happy hour-u, odaberite neki drugi", "Postoji na Happy hour-u");
+                        MessageBox.Show("Artikl se već nalazi na happy hour-u, odaberite neki drugi!", "Postoji na happy hour-u");
                         return;
                     }
                 }
@@ -163,20 +163,17 @@ namespace RP3_projekt
             int artiklIdHH = int.Parse(val);
 
             DialogResult dialogResult =
-                MessageBox.Show("Želite li sigurno maknuti artikl s Happy hour-a?", 
-                "Makni s Happy hour-a", 
-                MessageBoxButtons.YesNo);
+                CustomMessageBox.Show("Želite li sigurno maknuti artikl s happy\nhour-a?", 
+                "Makni s happy hour-a");
 
-            if (dialogResult == DialogResult.No)
+            if (dialogResult == DialogResult.Yes)
             {
-                return;
+                //dialogResult == DialogResult.Yes -> mičemo artikl s Happy hour-a
+                deleteFromHappyHour(artiklIdHH);
+
+                ReadArtikl();
+                ReadArtiklHH();
             }
-
-            //dialogResult == DialogResult.Yes -> mičemo artikl s Happy hour-a
-            deleteFromHappyHour(artiklIdHH);
-
-            ReadArtikl();
-            ReadArtiklHH();
         }
 
         private void deleteFromHappyHour(int idArtiklHH)
@@ -186,7 +183,7 @@ namespace RP3_projekt
                 using (SqlConnection veza = new SqlConnection(connectionString))
                 {
                     veza.Open();
-                    string upit = "DELETE FROM HappyHour WHERE id=@id";
+                    string upit = "DELETE FROM HappyHour WHERE artikl_id=@id";
                     using (SqlCommand command = new SqlCommand(upit, veza))
                     {
                         {

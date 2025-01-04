@@ -247,10 +247,8 @@ namespace RP3_projekt
 
         private void logoutBtn_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Želite li se odjaviti iz aplikacije?",
-                                   "Odjava",
-                                   MessageBoxButtons.YesNo,
-                                   MessageBoxIcon.Question);
+            DialogResult dialogResult = CustomMessageBox.Show("Želite li se odjaviti iz aplikacije?",
+                                   "Odjava");
             if (dialogResult == DialogResult.Yes)
             {
                 //zaustavimo prvo timer, iako ne treba jer se odnosi samo na ovu formu, nije na odmet

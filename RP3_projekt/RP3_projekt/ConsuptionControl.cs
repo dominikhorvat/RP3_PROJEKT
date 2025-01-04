@@ -110,7 +110,7 @@ namespace RP3_projekt
                     {
                         chartPotrosnjaArtikla.Series.Clear();
 
-                        Series series = new Series("Količina za " + naziv);
+                        Series series = new Series("Količina za '" + naziv + "'");
                         series.ChartType = SeriesChartType.Column;
                         chartPotrosnjaArtikla.Series.Add(series);
 
@@ -171,11 +171,11 @@ namespace RP3_projekt
 
                         if (ukupnaKolicina > 0)
                         {
-                            labelUkupnaPotrosnja.Text = $"Artikl {naziv} je prodan {ukupnaKolicina} puta u odabranom razdoblju.";
+                            labelUkupnaPotrosnja.Text = $"Artikl '{naziv}' je prodan {ukupnaKolicina} puta u odabranom razdoblju.";
                         }
                         else
                         {
-                            labelUkupnaPotrosnja.Text = $"Artikl {naziv} nije prodan u odabranom razdoblju.";
+                            labelUkupnaPotrosnja.Text = $"Artikl '{naziv}' nije prodan u odabranom razdoblju.";
                         }
                     }
                 }
@@ -216,7 +216,7 @@ namespace RP3_projekt
                         {
                             string najprodavanijiArtikl = reader["Artikl"].ToString();
                             int najprodavanijaKolicina = Convert.ToInt32(reader["UkupnoKolicina"]);
-                            labelNajviseProdani.Text = $"Najprodavaniji artikl je {najprodavanijiArtikl} s količinom {najprodavanijaKolicina}.";
+                            labelNajviseProdani.Text = $"Najprodavaniji artikl je '{najprodavanijiArtikl}' s količinom {najprodavanijaKolicina}.";
                         }
                     }
                 }
