@@ -14,10 +14,10 @@ namespace RP3_projekt
 {
     public partial class FreezerControl : UserControl
     {
-        string connectionString = ConfigurationManager
+        private string connectionString = ConfigurationManager
             .ConnectionStrings["BazaCaffeBar"].ConnectionString;
 
-        BindingList<Item> items;
+        private BindingList<Item> items;
 
         public FreezerControl()
         {
@@ -26,6 +26,7 @@ namespace RP3_projekt
             InitFreezerItems();
         }
 
+        #region Inicijalizacija prikaza artikala u hladnjaku
         private void InitFreezerItems()
         {
             items = GetAllItems();
@@ -89,7 +90,9 @@ namespace RP3_projekt
 
             return itemsList;
         }
+        #endregion
 
+        #region Punjenje artikla u hladnjaku
         private void addItemBtn_Click(object sender, EventArgs e)
         {
             if(freezerItemsView.SelectedRows.Count == 0)
@@ -135,5 +138,6 @@ namespace RP3_projekt
 
             connection.Close();
         }
+        #endregion
     }
 }

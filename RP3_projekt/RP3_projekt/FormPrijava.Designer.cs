@@ -91,7 +91,6 @@
             this.label3.Size = new System.Drawing.Size(82, 22);
             this.label3.TabIndex = 3;
             this.label3.Text = "Lozinka:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBoxUsernameLogin
             // 
@@ -130,7 +129,6 @@
             this.Name = "FormPrijava";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
-            this.Load += new System.EventHandler(this.FormPrijava_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Prijava_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();

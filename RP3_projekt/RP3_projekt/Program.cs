@@ -24,17 +24,6 @@ namespace RP3_projekt
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormPrijava());
-            //Application.Run(new FormStvoriZaposlenika());
-            //Application.Run(new FormKonobar(new Employee()
-            //{
-            //    Id = 9,
-            //    Username = "konobar",
-            //    Authorization = "Konobar",
-            //    Coffee = 2,
-            //    Juice = 1,
-            //    LastLogin = DateTime.Parse("30.11.2024. 00:00:00")
-            //}));
-            //Application.Run(new FormVlasnik());
         }
     }
 }

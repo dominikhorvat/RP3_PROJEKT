@@ -106,6 +106,9 @@ namespace RP3_projekt
                             updateNaredba.ExecuteNonQuery();
                         }
 
+                        textBoxUsernameLogin.Text = null;
+                        textBoxPasswordLogin.Text = null;
+
                         if (employee.Authorization == "Konobar")
                         {
                             FormKonobar formaKonobar = new FormKonobar(employee);
@@ -143,16 +146,6 @@ namespace RP3_projekt
                 hashBytes = algorithm.ComputeHash(bytes);
             }
             return Convert.ToBase64String(hashBytes);
-        }
-
-        private void FormPrijava_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         //Događaj za crtanje pozadine

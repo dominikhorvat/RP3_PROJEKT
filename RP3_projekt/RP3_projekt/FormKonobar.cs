@@ -15,8 +15,8 @@ namespace RP3_projekt
 {
     public partial class FormKonobar : Form
     {
+        private Timer timer;
         private Employee currentEmployee;
-        public Timer timer;
         private Button selectedButton;
 
         public FormKonobar(Employee currentEmployee)
@@ -30,8 +30,9 @@ namespace RP3_projekt
 
             this.currentEmployee = currentEmployee;
 
-            NotificationsService.Initialize(notificationPictureBox);
+            NotificationsService.Initialize(notificationPictureBox); // dohvaćanje obavijesti iz baze
 
+            // po defaultu je prikazana kontrola za ispis računa
             BillsControl control = new BillsControl(currentEmployee);
             ShowControl(control, billsBtn);
         }
@@ -67,6 +68,7 @@ namespace RP3_projekt
             catch (Exception ex) { Console.WriteLine(ex.ToString()); }
         }
 
+        #region Upravljanje prikazanom kontrolom u formi za konobara
         private void billsBtn_Click(object sender, EventArgs e)
         {
             BillsControl control = new BillsControl(currentEmployee);
@@ -97,6 +99,11 @@ namespace RP3_projekt
             ShowControl(control, null);
         }
 
+        /// <summary>
+        /// Metoda za prikaz odgovarajuće kontrole na glavnom (desnom) dijelu prozora.
+        /// </summary>
+        /// <param name="control">Kontrola koja prikazuje određenu funkcionalnost za konobara.</param>
+        /// <param name="button">Gumb koji pokreće prikaz kontrole.</param>
         private void ShowControl(UserControl control, Button button)
         {
             panelContent.Controls.Clear();
@@ -105,7 +112,7 @@ namespace RP3_projekt
 
             if (button != null)
             {
-                UpdateSelectedButton(button);
+                UpdateSelectedButton(button); // update gumba aktivne kontrole u sidebar-u
             }
         }
 
@@ -119,5 +126,6 @@ namespace RP3_projekt
             button.ForeColor = Color.Black;
             selectedButton = button;
         }
+        #endregion
     }
 }

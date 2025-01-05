@@ -14,10 +14,10 @@ namespace RP3_projekt
 {
     public partial class StorageControl : UserControl
     {
-        string connectionString = ConfigurationManager
+        private string connectionString = ConfigurationManager
             .ConnectionStrings["BazaCaffeBar"].ConnectionString;
 
-        BindingList<Item> items;
+        private BindingList<Item> items;
 
         public StorageControl()
         {
@@ -26,6 +26,7 @@ namespace RP3_projekt
             InitStorageItems();
         }
 
+        #region Inicijalizacija prikaza artikala u skladištu
         private void InitStorageItems()
         {
             items = GetAllItems();
@@ -84,7 +85,9 @@ namespace RP3_projekt
 
             return itemsList;
         }
+        #endregion
 
+        #region Nadopuna artikla u skladištu
         private void addItemBtn_Click(object sender, EventArgs e)
         {
             if (storageItemsView.SelectedRows.Count == 0)
@@ -122,5 +125,6 @@ namespace RP3_projekt
 
             connection.Close();
         }
+        #endregion
     }
 }

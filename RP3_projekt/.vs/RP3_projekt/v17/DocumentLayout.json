@@ -1,14 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\",
+  "WorkspaceRootPath": "C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\domin\\desktop\\projektizrp3\\rp3_projekt\\rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\rp3_projekt\\managementcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\managementcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|c:\\users\\ruzica\\desktop\\faks\\rp3\\rp3_projekt\\rp3_projekt\\rp3_projekt\\formkonobar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formkonobar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,16 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -35,25 +23,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormVlasnik.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormVlasnik.cs",
-              "RelativeDocumentMoniker": "RP3_projekt\\FormVlasnik.cs",
-              "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormVlasnik.cs [Design]",
-              "RelativeToolTip": "RP3_projekt\\FormVlasnik.cs [Design]",
+              "Title": "FormKonobar.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\RP3_projekt\\FormKonobar.cs",
+              "RelativeDocumentMoniker": "RP3_projekt\\FormKonobar.cs",
+              "ToolTip": "C:\\Users\\Ruzica\\Desktop\\faks\\rp3\\RP3_PROJEKT\\RP3_projekt\\RP3_projekt\\FormKonobar.cs [Design]",
+              "RelativeToolTip": "RP3_projekt\\FormKonobar.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T19:21:58.789Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ManagementControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\ManagementControl.cs",
-              "RelativeDocumentMoniker": "RP3_projekt\\ManagementControl.cs",
-              "ToolTip": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\ManagementControl.cs [Design]",
-              "RelativeToolTip": "RP3_projekt\\ManagementControl.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T19:21:49.57Z",
+              "WhenOpened": "2025-01-05T15:04:51.04Z",
               "EditorCaption": " [Design]"
             }
           ]

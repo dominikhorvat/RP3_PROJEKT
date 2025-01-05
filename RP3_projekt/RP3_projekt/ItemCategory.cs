@@ -25,8 +25,14 @@ namespace RP3_projekt
         OTHER
     }
 
+    /// <summary>
+    /// Pomoćna klasa koja služi kako bi se kategorije artikala na korisničkom sučelu prikazale na hrvatskom.
+    /// </summary>
     static class ItemCategoryUtility
     {
+        /// <summary>
+        /// Mapa čiji je kluč enumeracija kategorije artikla, a vrijednost prijevod na hrvatski.
+        /// </summary>
         public static readonly Dictionary<ItemCategory, string> itemCategoryTranslations = new Dictionary<ItemCategory, string>
         {
             { ItemCategory.WATER, "voda"},

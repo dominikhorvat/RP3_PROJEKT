@@ -40,6 +40,7 @@ namespace RP3_projekt
             PopulateTotal();
         }
 
+        #region Prikaz računa koji su izdani u smjeni
         private void PopulateShiftBills()
         {
             shiftBillsLabel.Text = $"Računi izdani u smjeni (od {currentEmployee.LastLogin})";
@@ -111,7 +112,9 @@ namespace RP3_projekt
 
             return new BindingList<Bill>(billsMap.Values.ToList());
         }
+        #endregion
 
+        #region Prikaz artikala koji su prodani u smjeni
         private void PopulateShiftItems()
         {
             shiftItemsLabel.Text = $"Artikli prodani u smjeni (od {currentEmployee.LastLogin})";
@@ -163,11 +166,14 @@ namespace RP3_projekt
 
             return new BindingList<Item>(shiftItems.Values.ToList());
         }
+        #endregion
 
+        #region Sortiranje tablica po stupcima
         private void shiftBillsView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             DataGridViewColumn column = shiftBillsView.Columns[e.ColumnIndex];
 
+            // defaultno sortiranje je uzlazno, osim ako već nije sortirano po istom stupcu
             if (billsSortColumn == column && billsSortOrder == System.Windows.Forms.SortOrder.Ascending)
             {
                 billsSortOrder = System.Windows.Forms.SortOrder.Descending;
@@ -239,6 +245,7 @@ namespace RP3_projekt
             }
             shiftItemsView.Refresh();
         }
+        #endregion
 
         private void PopulateTotal()
         {

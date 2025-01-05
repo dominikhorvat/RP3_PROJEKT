@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace RP3_projekt
 {
+    /// <summary>
+    /// Forma koja prestavlja prilagođeni MessageBox na koji se može odgovoriti s da/ne.
+    /// </summary>
     public partial class CustomMessageBox : Form
     {
         public CustomMessageBox()

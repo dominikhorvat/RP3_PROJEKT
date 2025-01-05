@@ -20,7 +20,7 @@ namespace RP3_projekt
 
 		private static List<Notification> _notifications = new List<Notification>();
 
-		private static PictureBox notificationPictureBox = null;
+		private static PictureBox notificationPictureBox = null; // ikona za obavijesti koja se prikazuje samo ako postoje obavijesti
 
 		public static void Initialize(PictureBox pictureBox)
         {
@@ -34,13 +34,20 @@ namespace RP3_projekt
 			return _notifications;
 		}
 
-		public static void CreateNotification(int itemId)
+        /// <summary>
+        /// Kreiranje obavijesti koje se koristi kad se kreira artikl (po defaultu nakon kreiranja artikla količina u skladištu i hladnjaku je 0).
+        /// </summary>
+        /// <param name="itemId"></param>
+        public static void CreateNotification(int itemId) 
 		{
 			Item item = GetItem(itemId);
 			CreateNotification(item, NotificationLocation.STORAGE);
 			CreateNotification(item, NotificationLocation.FREEZER);
 		}
 
+		/// <summary>
+		/// Kreiranje obavijesti ukoliko je potrebno i ako već nije kreirana za dani artikl i odgovarajuće spremište.
+		/// </summary>
 		public static void CreateNotificationIfNeeded(Item item, NotificationLocation location)
 		{
 			if((location == NotificationLocation.STORAGE && item.StorageQuantity < LOW_QUANTITY_LIMIT) ||
@@ -57,6 +64,9 @@ namespace RP3_projekt
 			}
 		}
 
+		/// <summary>
+		/// Brisanje obavijesti ako postoji i ako se povećala količina u skladištu/hladnjaku.
+		/// </summary>
 		public static void DeleteNotificationIfNeeded(Item item, NotificationLocation location)
 		{
 			Notification notification = GetNotificationByItemIdAndLocation(item.Id, location);

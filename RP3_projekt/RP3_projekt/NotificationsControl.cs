@@ -19,6 +19,7 @@ namespace RP3_projekt
             DisplayNotifications();
         }
 
+        #region Prikaz postojećih notifikacija
         private void DisplayNotifications()
         {
             List<Notification> notifications = NotificationsService.GetAllNotifications();
@@ -27,5 +28,6 @@ namespace RP3_projekt
                 notificationsView.Items.Add(notification);
             }
         }
+        #endregion
     }
 }

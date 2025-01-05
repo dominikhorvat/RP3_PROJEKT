@@ -19,7 +19,7 @@ namespace RP3_projekt
 {
     public partial class BillsControl : UserControl
     {
-        string connectionString = ConfigurationManager
+        private string connectionString = ConfigurationManager
             .ConnectionStrings["BazaCaffeBar"].ConnectionString;
 
         private Employee currentEmployee;
@@ -36,6 +36,7 @@ namespace RP3_projekt
             InitBillsView(true);
         }
 
+        #region Inicijalizacija prikaza
         private void InitBillsView(bool init)
         {
             InitAvailableItems();
@@ -44,6 +45,9 @@ namespace RP3_projekt
             InitPanelReturn();
         }
 
+        /// <summary>
+        /// Prikaz artikala koji se mogu dodati na račun (oni kojih ima u hladnjaku).
+        /// </summary>
         private void InitAvailableItems()
         {
             SqlConnection connection = new SqlConnection(connectionString);
@@ -76,6 +80,9 @@ namespace RP3_projekt
             }
         }
 
+        /// <summary>
+        /// Inicijalizacija tablice u kojoj se prikazuju artikli koji su dodani na račun.
+        /// </summary>
         private void InitSelectedItems(bool init)
         {
             if (init)
@@ -111,6 +118,10 @@ namespace RP3_projekt
             }
         }
 
+        /// <summary>
+        /// Inicijalizacija prikaza dostupnih popusta.
+        /// Checkbox-evi za besplatne kave ili cijeđeni sok se prikazuju samo ako konobar već nije iskoristio tu pogodnost u smjeni.
+        /// </summary>
         private void InitDiscounts()
         {
             employeeDiscount.Checked = false;
@@ -124,6 +135,10 @@ namespace RP3_projekt
             freeJuice.Visible = currentEmployee.Juice > 0;
         }
 
+        /// <summary>
+        /// Inicijalizacija panela gdje se računa koliko novaca treba vratiti gostu.
+        /// Prikazuje se tek nakon ispisa računa.
+        /// </summary>
         private void InitPanelReturn()
         {
             panelReturn.Visible = false;
@@ -131,7 +146,9 @@ namespace RP3_projekt
             received.Text = string.Empty;
             forReturn.Text = string.Empty;
         }
+        #endregion
 
+        #region Dodavanje/brisanje stavki računa
         private void addItemBtn_Click(object sender, EventArgs e)
         {
             if (freezerItems.SelectedItems.Count == 0)
@@ -140,10 +157,10 @@ namespace RP3_projekt
                 return;
             }
 
-            foreach (Item item in freezerItems.SelectedItems)
+            foreach (Item item in freezerItems.SelectedItems) 
             {
                 Item selectedItem = selectedItems.FirstOrDefault(i => i.Id == item.Id);
-                if (selectedItem == null)
+                if (selectedItem == null) // ako artikl već nije dodan, dodaje se, inače se samo povećava količina za 1
                 {
                     selectedItem = item.Clone();
                     selectedItems.Add(selectedItem);
@@ -170,7 +187,9 @@ namespace RP3_projekt
 
             selectedItemsView.Refresh();
         }
+        #endregion
 
+        #region Ispis računa
         private void printBillBtn_Click(object sender, EventArgs e)
         {
             if (selectedItems.Count == 0)
@@ -199,12 +218,13 @@ namespace RP3_projekt
             decimal totalPrice = price;
 
             List<Discount> discounts = new List<Discount>();
-            byte usedFreeCoffee = 0, usedFreeJuice = 0;
+            byte usedFreeCoffee = 0, usedFreeJuice = 0; // inicijalizacija varijabli pomoću kojih se gleda treba li updateati tablicu 'Zaposlenik'
             CheckDiscounts(discounts, ref totalPrice, ref usedFreeCoffee, ref usedFreeJuice, time);
 
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
 
+            // spremanje računa u bazu
             SqlCommand command = new SqlCommand("INSERT INTO Racun (zaposlenik_id, total_price, time) VALUES (@employeeId, @totalPrice, @time); SELECT SCOPE_IDENTITY();", connection);
             command.Parameters.AddWithValue("@employeeId", currentEmployee.Id);
             command.Parameters.AddWithValue("@totalPrice", totalPrice);
@@ -214,12 +234,14 @@ namespace RP3_projekt
 
             foreach (Item item in selectedItems)
             {
+                // spremanje stavke računa u bazu
                 command = new SqlCommand("INSERT INTO StavkaRacuna (racun_id, artikl_id, quantity) VALUES (@billId, @itemId, @quantity)", connection);
                 command.Parameters.AddWithValue("@billId", billId);
                 command.Parameters.AddWithValue("@itemId", item.Id);
                 command.Parameters.AddWithValue("@quantity", item.SelectedQuantity);
                 command.ExecuteNonQuery();
 
+                // update količine artikla u hladnjaku
                 item.FreezerQuantity -= item.SelectedQuantity;
                 command = new SqlCommand("UPDATE Artikl SET freezer_quantity = @freezerQuantity WHERE id = @itemId", connection);
                 command.Parameters.AddWithValue("@itemId", item.Id);
@@ -229,7 +251,7 @@ namespace RP3_projekt
                 NotificationsService.CreateNotificationIfNeeded(item, NotificationLocation.FREEZER);
             }
 
-            if (usedFreeCoffee > 0 || usedFreeJuice > 0)
+            if (usedFreeCoffee > 0 || usedFreeJuice > 0) // update iskorištenih besplatnih kava/cijeđenog soka zaposlenika
             {
                 command = new SqlCommand("UPDATE Zaposlenik SET coffee = @coffee, juice = @juice WHERE id = @employeeId", connection);
                 command.Parameters.AddWithValue("@employeeId", currentEmployee.Id);
@@ -251,9 +273,9 @@ namespace RP3_projekt
                 Discounts = discounts
             };
 
-            PrintBill();
+            PrintBill(); // ispis računa
 
-            ShowPanelReturn();
+            ShowPanelReturn(); // prikaz panela za računanje ostatka
         }
 
         private void CheckDiscounts(List<Discount> discounts, ref decimal totalPrice, ref byte usedFreeCoffee, ref byte usedFreeJuice, DateTime time)
@@ -280,6 +302,8 @@ namespace RP3_projekt
                 }
                 selectedCoffees.OrderBy(i => i.Price);
 
+                // besplatna kava se koristi 1 ili 2 puta, ovisno je li zaposlenik iskoristio već kavu i koliko ih je dodao u račun
+                // popust se koristi za kave s najmanjom cijenom na računu
                 for (int i = 0; i < currentEmployee.Coffee; i++)
                 {
                     if (i < selectedCoffees.Count)
@@ -306,6 +330,7 @@ namespace RP3_projekt
             {
                 List<Item> selectedJuices = selectedItems.Where(i => i.Category == ItemCategory.FRESH_JUICE).ToList();
 
+                // popust se koristi za 1 cijeđeni sok ako je dodan na račun, i to onaj s najmanjom cijenom
                 if (selectedJuices.Count > 0)
                 {
                     Item freeJuice = selectedJuices.OrderBy(i => i.Price).First();
@@ -326,14 +351,14 @@ namespace RP3_projekt
         {
             if(totalPrice > 0)
             {
-                List<HappyHour> happyHours = GetExistingHappyHours(time);
+                List<HappyHour> happyHours = GetExistingHappyHours(time); // dohvat aktivnih happy hour popusta
 
                 foreach (HappyHour happyHour in happyHours)
                 {
                     Item item = selectedItems.FirstOrDefault(i => i.Id == happyHour.ItemId);
                     if (item != null)
                     {
-                        for (int i = 0; i < item.SelectedQuantity - item.FreeCount; i++)
+                        for (int i = 0; i < item.SelectedQuantity - item.FreeCount; i++) // popust se primjenjuje na svaki artikl ukoliko ih ima više i za koji nije već iskorišten popust besplatna kava/cijeđeni sok
                         {
                             decimal discountValue = Math.Round(item.Price * (happyHour.Discount / 100), 2);
                             discounts.Add(new Discount()
@@ -380,7 +405,7 @@ namespace RP3_projekt
 
         private void CheckEmployeeDiscount(List<Discount> discounts, ref decimal totalPrice)
         {
-            if (employeeDiscount.Checked && totalPrice > 0)
+            if (employeeDiscount.Checked && totalPrice > 0) // popust ide na sve artikle u računu (i one koji su na happy hour popustu)
             {
                 decimal discountValue = Math.Round(totalPrice * 0.20m, 2);
                 discounts.Add(new Discount()
@@ -448,7 +473,9 @@ namespace RP3_projekt
             }
             e.Graphics.DrawString($"Total: {bill.TotalPrice}€", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, x + 300, y);
         }
+        #endregion
 
+        #region Računanje ostatka kojeg treba vratiti gostu
         private void ShowPanelReturn()
         {
             panelReturn.Visible = true;
@@ -472,6 +499,7 @@ namespace RP3_projekt
 
             forReturn.Text = Math.Round(receivedNum - bill.TotalPrice, 2).ToString();
         }
+        #endregion
 
         private void finishBillBtn_Click(object sender, EventArgs e)
         {
