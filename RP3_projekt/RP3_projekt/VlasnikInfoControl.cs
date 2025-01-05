@@ -20,9 +20,15 @@ namespace RP3_projekt
                 "Znak separatora koji se uvažava prilikom unosa je znak zareza.\n" +
                 "Također, moguće je unijeti brojeve oblika: \"1\", \"2,1\" i \"3,12\".";
 
-            labelPotrosnjaInfo.Text = "U potrošnji kada potvrdite datum dobit ćete grafički " +
-                "prikaz za odabrani artikl \nu odabranom rasponu ako postoji te ispis koliko" +
+            labelPotrosnjaOdabranog.Text = "U potrošnji kada kliknete na gumb \"Prikaži odabrani\" dobit ćete grafički " +
+                "prikaz \nza odabrani artikl u odabranom rasponu ako postoji, te ispis koliko" +
                 " je prodano.\nTakođer, bit će navedeni artikl koji je najviše prodan (ukoliko postoji).";
+
+            labelPotrosnja.Text = "U Potrošnji kada kliknete na gumb \"Prikaži prodane\" dobivate ispis \n" +
+                "svih prodanih artikala u odabranom rasponu izabranom na odgovarjućim kalendarima.";
+
+            labelPotrosnjaSvih.Text = "U Potrošnji kada kliknete na gumb \"Cjelokupni\" dobivate ispis \n" +
+                "za cjelokupno vrijeme i sve artikle prodane tokom cijelog razdoblja rada Caffe bar-a.";
         }
     }
 }

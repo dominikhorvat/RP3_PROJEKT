@@ -51,7 +51,7 @@ namespace RP3_projekt
             DateTime timeUntil = dateTimePickerUntil.Value;
 
             //provjera jesu li timeFrom i timeUntil različiti
-            //i timeFrom < timeUntil barem 6 sati razlike
+            //i timeFrom < timeUntil barem 2 sati razlike
             if (timeFrom >= timeUntil)
             {
                 MessageBox.Show("Vrijeme početka mora biti manje od vremena završetka!");
@@ -59,9 +59,9 @@ namespace RP3_projekt
             }
 
             TimeSpan razlika = timeUntil.Subtract(timeFrom);
-            if (razlika.TotalHours < 6)
+            if (razlika.TotalHours <= 2)
             {
-                MessageBox.Show("Razmak između početka i završetka mora biti najmanje 6 sati!");
+                MessageBox.Show("Razmak između početka i završetka mora biti najmanje 2 sata!");
                 return;
             }
 

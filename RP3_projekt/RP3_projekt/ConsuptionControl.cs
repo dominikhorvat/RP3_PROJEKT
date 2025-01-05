@@ -15,6 +15,10 @@ namespace RP3_projekt
 {
     public partial class ConsuptionControl : UserControl
     {
+
+        private FormConsuption prikazPotrosnje; //forma za prikaz prodanih artikala u odabranom razdoblju
+        private FormAllTimeConsuption prikazSvePotrosnje; //forma za prikaz cjelokupne potrosnje neovisno o razdoblju
+
         public ConsuptionControl()
         {
             InitializeComponent();
@@ -241,6 +245,39 @@ namespace RP3_projekt
                     }
                 }
             }
+        }
+
+        private void buttonPrikazProdanih_Click(object sender, EventArgs e)
+        {
+            //provjera je li datum pocetka strogo veći od datuma zavrsetka
+            DateTime pocetniDatum = monthCalendarPocetak.SelectionRange.Start;
+            DateTime zavrsniDatum = monthCalendarKraj.SelectionRange.Start;
+
+            if (pocetniDatum > zavrsniDatum)
+            {
+                MessageBox.Show("Početni datum ne može biti veći od završnog!", "Greška u datumu!");
+                return;
+            }
+
+            if (prikazPotrosnje == null || prikazPotrosnje.IsDisposed)
+            {
+                prikazPotrosnje = new FormConsuption();
+            }
+            
+            prikazPotrosnje.PopuniTablicuPotrosnje(pocetniDatum, zavrsniDatum);
+            prikazPotrosnje.ShowDialog();
+        }
+
+        private void buttonCijeloVrijeme_Click(object sender, EventArgs e)
+        {
+
+            if (prikazSvePotrosnje == null || prikazSvePotrosnje.IsDisposed)
+            {
+                prikazSvePotrosnje = new FormAllTimeConsuption();
+            }
+
+            prikazSvePotrosnje.PopuniTablicuSvePotrosnje();
+            prikazSvePotrosnje.ShowDialog();
         }
     }
 }

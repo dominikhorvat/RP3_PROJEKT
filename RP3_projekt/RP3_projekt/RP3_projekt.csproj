@@ -97,6 +97,18 @@
     <Compile Include="FormAddOnHappyHour.Designer.cs">
       <DependentUpon>FormAddOnHappyHour.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAllTimeConsuption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAllTimeConsuption.Designer.cs">
+      <DependentUpon>FormAllTimeConsuption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsuption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsuption.Designer.cs">
+      <DependentUpon>FormConsuption.cs</DependentUpon>
+    </Compile>
     <Compile Include="HappyHour.cs" />
     <Compile Include="HappyHourControl.cs">
       <SubType>UserControl</SubType>
@@ -196,6 +208,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddOnHappyHour.resx">
       <DependentUpon>FormAddOnHappyHour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAllTimeConsuption.resx">
+      <DependentUpon>FormAllTimeConsuption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsuption.resx">
+      <DependentUpon>FormConsuption.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormKonobar.resx">
       <DependentUpon>FormKonobar.cs</DependentUpon>
