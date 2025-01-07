@@ -56,3 +56,5 @@ C:\Users\Ruzica\Desktop\faks\rp3\RP3_PROJEKT\RP3_projekt\RP3_projekt\obj\Debug\R
 C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.CustomMessageBox.resources
 C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.FormConsuption.resources
 C:\Users\domin\Desktop\projektIzRp3\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.FormAllTimeConsuption.resources
+C:\Users\Ruzica\Desktop\faks\rp3\RP3_PROJEKT\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.FormAllTimeConsuption.resources
+C:\Users\Ruzica\Desktop\faks\rp3\RP3_PROJEKT\RP3_projekt\RP3_projekt\obj\Debug\RP3_projekt.FormConsuption.resources
