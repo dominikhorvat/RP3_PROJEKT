@@ -15,7 +15,9 @@ namespace RP3_projekt
 {
     public partial class FormKonobar : Form
     {
+        //timer koji radi u pozadini kako bi se provjerio krajnji datum artikla na happy houru
         private Timer timer;
+
         private Employee currentEmployee;
         private Button selectedButton;
 
@@ -23,6 +25,7 @@ namespace RP3_projekt
         {
             InitializeComponent();
 
+            //inicijalizacija timer-a
             timer = new Timer();
             timer.Interval = 60 * 1000;
             timer.Tick += Timer_Tick;
@@ -48,6 +51,9 @@ namespace RP3_projekt
             moveFromHappyHour();
         }
 
+        /// <summary>
+        /// Metoda koja provjerava je li istekao happy hour artiklu
+        /// </summary>
         private void moveFromHappyHour()
         {
             string connectionString = ConfigurationManager

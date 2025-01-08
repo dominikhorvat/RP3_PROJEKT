@@ -22,6 +22,7 @@ namespace RP3_projekt
             PopuniPadajucuListu();
         }
 
+        //string za vezu s bazom
         string connectionString = ConfigurationManager
            .ConnectionStrings["BazaCaffeBar"].ConnectionString;
 
@@ -51,6 +52,7 @@ namespace RP3_projekt
             string unos = textBoxCijena.Text.Trim();
             string ispravanOblik = @"^(?:[1-9]\d*|\d)(\,\d{1,2})?$";
 
+            //pomocu regularnog izraza provjeravamo unos
             if (!Regex.IsMatch(unos, ispravanOblik))
             {
                 MessageBox.Show("Unesite ispravan broj u odgovarajućem formatu." +
@@ -107,6 +109,11 @@ namespace RP3_projekt
             }
         }
 
+        /// <summary>
+        /// Metoda koja provjerava nazive artikala u bazi s unesenim novim artiklom
+        /// </summary>
+        /// <param name="naziv">Naziv novog artikla za koji se provjerava</param>
+        /// <returns>Vraća 1 ako naziv artikla već postoji u bazi</returns>
         private int provjeriNazivArtikla(string naziv)
         {
             using (SqlConnection veza = new SqlConnection(connectionString))
@@ -133,6 +140,12 @@ namespace RP3_projekt
             }
         }
 
+        /// <summary>
+        /// Ubacujemo novi artikl u odgovarajuću tablicu u bazi
+        /// </summary>
+        /// <param name="naziv">naziv novog artikla</param>
+        /// <param name="cijena">cijena novog artikla</param>
+        /// <param name="kategorija">odabrana kategorija novog artikla</param>
         private void insertNoviArtikl(string naziv, decimal cijena, ItemCategory kategorija)
         {
             SqlConnection veza = new SqlConnection(connectionString);

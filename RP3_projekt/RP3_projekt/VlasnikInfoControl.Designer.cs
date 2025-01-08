@@ -76,7 +76,7 @@
             // 
             this.labelPotrosnjaSvih.AutoSize = true;
             this.labelPotrosnjaSvih.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPotrosnjaSvih.Location = new System.Drawing.Point(28, 371);
+            this.labelPotrosnjaSvih.Location = new System.Drawing.Point(28, 348);
             this.labelPotrosnjaSvih.Name = "labelPotrosnjaSvih";
             this.labelPotrosnjaSvih.Size = new System.Drawing.Size(0, 22);
             this.labelPotrosnjaSvih.TabIndex = 5;

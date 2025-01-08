@@ -22,6 +22,7 @@ namespace RP3_projekt
             ReadArtikl();
         }
 
+        //string za vezu s bazom
         string connectionString = ConfigurationManager
            .ConnectionStrings["BazaCaffeBar"].ConnectionString;
 
@@ -83,7 +84,7 @@ namespace RP3_projekt
             var val = this.dataGridViewChangePrice.SelectedRows[0].Cells[0].Value.ToString();
             if (val == null || val.Length == 0) return;
 
-            int artiklId= int.Parse(val);
+            int artiklId= int.Parse(val); //dohvaćam Id
 
             //provjerimo izraz u text boxu -> textBoxPromjenaCijene
             if(textBoxPromjenaCijene.Text.Length == 0)
@@ -147,7 +148,7 @@ namespace RP3_projekt
             var val = this.dataGridViewChangePrice.SelectedRows[0].Cells[0].Value.ToString();
             if (val == null || val.Length == 0) return;
 
-            int artiklDeleteId = int.Parse(val);
+            int artiklDeleteId = int.Parse(val); //dohvaćam Id
 
             DialogResult dialogResult =
                 CustomMessageBox.Show("Želite li sigurno maknuti artikl iz ponude?", "Brisanje artikla");

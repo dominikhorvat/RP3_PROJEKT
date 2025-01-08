@@ -182,6 +182,10 @@ namespace RP3_projekt
             }
         }
 
+        /// <summary>
+        /// Metoda koja briše artikl s happy hour-a
+        /// </summary>
+        /// <param name="idArtiklHH">Id artikla koji treba obrisati</param>
         private void deleteFromHappyHour(int idArtiklHH)
         {
             try

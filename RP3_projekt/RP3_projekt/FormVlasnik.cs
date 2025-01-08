@@ -21,6 +21,7 @@ namespace RP3_projekt
         {
             InitializeComponent();
 
+            //inicijalizacija timer-a
             timer = new Timer();
             timer.Interval = 60 * 1000;
             timer.Tick += Timer_Tick; 
@@ -35,6 +36,9 @@ namespace RP3_projekt
             moveFromHappyHour();
         }
 
+        /// <summary>
+        /// Metoda koja provjerava je li istekao happy hour artiklu
+        /// </summary>
         private void moveFromHappyHour()
         {
             string connectionString = ConfigurationManager
@@ -85,6 +89,7 @@ namespace RP3_projekt
             ShowControl(addNewArtiklControl, btnDodajNoviArtikl);
         }
 
+        //Metoda za čišćenje prethodnje UserControle i prilagodbe označenog gumba
         private void ShowControl(UserControl control, Button button)
         {
             panelContent.Controls.Clear();

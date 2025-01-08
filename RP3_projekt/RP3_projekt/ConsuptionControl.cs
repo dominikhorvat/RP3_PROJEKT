@@ -26,6 +26,7 @@ namespace RP3_projekt
             ispuniPadajucuListuArtiklima();
         }
 
+        //string za vezu s bazom
         string connectionString = ConfigurationManager
            .ConnectionStrings["BazaCaffeBar"].ConnectionString;
 
@@ -259,7 +260,7 @@ namespace RP3_projekt
                 return;
             }
 
-            if (prikazPotrosnje == null || prikazPotrosnje.IsDisposed)
+            if (prikazPotrosnje == null || prikazPotrosnje.IsDisposed) //ako forma ne postoji stvori ju
             {
                 prikazPotrosnje = new FormConsuption();
             }
@@ -271,7 +272,7 @@ namespace RP3_projekt
         private void buttonCijeloVrijeme_Click(object sender, EventArgs e)
         {
 
-            if (prikazSvePotrosnje == null || prikazSvePotrosnje.IsDisposed)
+            if (prikazSvePotrosnje == null || prikazSvePotrosnje.IsDisposed) //ako forma ne postoji stvori ju
             {
                 prikazSvePotrosnje = new FormAllTimeConsuption();
             }

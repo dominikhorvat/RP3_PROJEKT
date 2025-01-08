@@ -24,9 +24,13 @@ namespace RP3_projekt
             dataGridViewEmployee.SelectionChanged += DataGridViewEmployee_SelectionChanged;
         }
 
+        //string za vezu s bazom
         string connectionString = ConfigurationManager
             .ConnectionStrings["BazaCaffeBar"].ConnectionString;
 
+        /// <summary>
+        /// Metoda koja popunjava data grid view svim zaposlenicima
+        /// </summary>
         private void ReadAllEmployees()
         {
             SqlConnection veza = new SqlConnection(connectionString);
@@ -83,6 +87,7 @@ namespace RP3_projekt
 
             int employeeId = int.Parse(val);
 
+            //dodatan prozor kako bi potvrdili otkaz zaposleniku
             DialogResult dialogResult =
                 CustomMessageBox.Show("Jeste li sigurni da želite dati otkaz\nodabranom konobaru?",
                                 "Otkaz konobara");

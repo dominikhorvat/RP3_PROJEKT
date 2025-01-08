@@ -20,7 +20,7 @@ namespace RP3_projekt
                 "Znak separatora koji se uvažava prilikom unosa je znak zareza.\n" +
                 "Također, moguće je unijeti brojeve oblika: \"1\", \"2,1\" i \"3,12\".";
 
-            labelPotrosnjaOdabranog.Text = "U potrošnji kada kliknete na gumb \"Prikaži odabrani\" dobit ćete grafički " +
+            labelPotrosnjaOdabranog.Text = "U Potrošnji kada kliknete na gumb \"Prikaži odabrani\" dobit ćete grafički " +
                 "prikaz \nza odabrani artikl u odabranom rasponu ako postoji, te ispis koliko" +
                 " je prodano.\nTakođer, bit će navedeni artikl koji je najviše prodan (ukoliko postoji).";
 
