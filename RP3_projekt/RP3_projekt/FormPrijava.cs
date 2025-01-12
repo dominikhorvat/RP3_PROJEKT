@@ -108,6 +108,7 @@ namespace RP3_projekt
 
                         textBoxUsernameLogin.Text = null;
                         textBoxPasswordLogin.Text = null;
+                        checkBoxPrikaziLozinku.Checked = false;
 
                         if (employee.Authorization == "Konobar")
                         {
@@ -146,6 +147,18 @@ namespace RP3_projekt
                 hashBytes = algorithm.ComputeHash(bytes);
             }
             return Convert.ToBase64String(hashBytes);
+        }
+
+        private void checkBoxPrikaziLozinku_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxPrikaziLozinku.Checked)
+            {
+                textBoxPasswordLogin.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBoxPasswordLogin.UseSystemPasswordChar = true;
+            }
         }
 
         //Događaj za crtanje pozadine

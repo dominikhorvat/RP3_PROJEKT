@@ -118,5 +118,19 @@ namespace RP3_projekt
             }
             return Convert.ToBase64String(hashBytes);
         }
+
+        private void checkBoxPrikaziLozinku_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxPrikaziLozinku.Checked)
+            {
+                textBoxPassword.UseSystemPasswordChar = false;
+                textBoxPasswordConfirm.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBoxPassword.UseSystemPasswordChar = true;
+                textBoxPasswordConfirm.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

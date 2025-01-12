@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formprijava.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\rp3_projekt\\formkonobar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formkonobar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C33D51DF-EA58-4C5A-A9AD-8E7BEFC95E74}|RP3_projekt\\RP3_projekt.csproj|solutionrelative:rp3_projekt\\formvlasnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FormVlasnik.cs [Design]",
               "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormVlasnik.cs",
               "RelativeDocumentMoniker": "RP3_projekt\\FormVlasnik.cs",
@@ -50,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FormKonobar.cs [Design]",
               "DocumentMoniker": "C:\\Users\\domin\\Desktop\\projektIzRp3\\RP3_projekt\\RP3_projekt\\FormKonobar.cs",
               "RelativeDocumentMoniker": "RP3_projekt\\FormKonobar.cs",
